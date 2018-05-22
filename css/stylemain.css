@@ -12,7 +12,6 @@ body, html {
     background-size: cover;
     position: relative;
     background-image: url("../img/background.png");
-    margin-top: 86px;
 }
 
 .navbar {
@@ -206,7 +205,6 @@ header a:hover, header a:visited, header a:link, header a:active{
      background-size: cover;
      position: relative;
      background-image: url("../img/user/background.png");
-    margin-top: 86px;
  }
 
 #Usermaincontent {
@@ -336,7 +334,6 @@ header a:hover, header a:visited, header a:link, header a:active{
     background-size: cover;
     position: relative;
     background-image: url("../img/background.png");
-    margin-top: 86px;
 }
 
 .list-group-item {
@@ -351,7 +348,6 @@ header a:hover, header a:visited, header a:link, header a:active{
     padding-top: 10vh;
     background-color: #1f2546;
     padding-bottom: 2vh;
-    margin-top: 86px;
 }
 
 #Entetepricing {
@@ -532,7 +528,6 @@ ul.PartenaireTabs > li.nav-item > a > span {
 
 .navbar-expand-md {
     background-color: #1f2546;
-    height: 86px;
 }
 
 @keyframes blink {

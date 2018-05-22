@@ -18,6 +18,19 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
+    <script>
+
+        var onResize = function() {
+            $("body").css("padding-top", $(".navbar-expand-md").height());
+        };
+
+        $(window).resize(onResize);
+
+        $(function() {
+            onResize();
+        });
+    </script>
+
 </head>
 <body>
 

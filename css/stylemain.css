@@ -596,13 +596,14 @@ a.nav-link {
     }
 
     .mainImgButton1 {
-        width: 80px !important;;
+        width: 90px !important;;
     }
 
     .mainImgButton2 {
         max-width: 110px !important;;
     }
 }
+
 @media all and (max-width: 599px)
 {
     #ImgBackground {
@@ -713,7 +714,7 @@ a.nav-link {
         display: none !important;
     }
     .ImgVoiture {
-        max-width: 100%;
+        max-width: 110%;
     }
 
     .mainImgButton1 {

@@ -586,6 +586,23 @@ a.nav-link {
     }
 }
 
+@media all and (max-width: 400px) {
+    .ImgBuildings, #ImgCadeauEnsemble {
+        display: none !important;
+    }
+
+    .ImgVoiture {
+        max-width: 150% !important;
+    }
+
+    .mainImgButton1 {
+        width: 80px !important;;
+    }
+
+    .mainImgButton2 {
+        max-width: 110px !important;;
+    }
+}
 @media all and (max-width: 599px)
 {
     #ImgBackground {
@@ -613,13 +630,6 @@ a.nav-link {
         margin-left: 0px;
     }
 
-    .mainImgButton1 {
-        width: 50px;
-    }
-
-    .mainImgButton2 {
-        max-width: 60px;
-    }
     .btn-boutonnav{
         border-radius: 6px !important;
         width: 80px;
@@ -699,6 +709,20 @@ a.nav-link {
         font-size: 20px;
     }
 
+    .ImgBuildings, #ImgCadeauEnsemble {
+        display: none !important;
+    }
+    .ImgVoiture {
+        max-width: 100%;
+    }
+
+    .mainImgButton1 {
+        width: 100px;
+    }
+    .mainImgButton2 {
+        max-width: 130px;
+    }
+
 
 }
 
@@ -730,12 +754,6 @@ a.nav-link {
         margin-left: 0px;
     }
 
-    .mainImgButton1 {
-        width: 75px;
-    }
-    .mainImgButton2 {
-        max-width: 90px;
-    }
     .btn-boutonnav{
         border-radius: 9px !important;
         width: 100px;
@@ -783,6 +801,7 @@ a.nav-link {
         display: none;
     }
 
+
     #ImgCadeauEnsemble {
         max-width: 40% !important;
     }
@@ -797,6 +816,14 @@ a.nav-link {
 
     #Pricingmaincontent span {
         font-size: 22px;
+    }
+
+
+    .mainImgButton1 {
+        width: 110px;
+    }
+    .mainImgButton2 {
+        max-width: 135px;
     }
 
 }
@@ -816,6 +843,20 @@ a.nav-link {
 
     .ImgBuildings {
         bottom: -5vh;
+    }
+
+    .ImgBuildings, #ImgCadeauEnsemble {
+        display: none !important;
+    }
+    .ImgVoiture {
+        max-width: 85% !important;
+    }
+
+    .mainImgButton1 {
+        width: 150px;
+    }
+    .mainImgButton2 {
+        max-width: 180px;
     }
 
 }
@@ -981,7 +1022,7 @@ a.nav-link {
         font-weight: 600;
     }
     .topcentre p{
-        font-size: 20px;
+        font-size: 19px;
         letter-spacing: 1.2px;
     }
     #maincontent span {

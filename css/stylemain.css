@@ -1,6 +1,11 @@
 @font-face { font-family: AvenirNextCondensed-Regular; src: url(../fonts/AvenirNextCondensed-Regular.ttf); }
 @font-face { font-family: AvenirNextCondensed-UltraLight; src: url(../fonts/AvenirNextCondensed-UltraLight.ttf); }
 @font-face { font-family: MyriadPro-SemiBold; src: url(../fonts/MyriadPro-Semibold.otf); }
+@font-face { font-family: MyriadPro-Regular; src: url(../fonts/MyriadPro-Regular.otf); }
+@font-face { font-family: AvenirNext-Medium; src: url(../fonts/AvenirNext-Medium.ttf); }
+@font-face { font-family: AvenirNext-Regular; src: url(../fonts/AvenirNext-Regular.ttf); }
+@font-face { font-family: Dosis-Medium; src: url(../fonts/Dosis-Medium.otf); }
+@font-face { font-family: AvenirNext-DemiBold; src: url(../fonts/AvenirNext-DemiBold.ttf); }
 
 body, html {
     height: 100%;
@@ -202,38 +207,20 @@ header a:hover, header a:visited, header a:link, header a:active{
 }
 
 #UPImgBackground {
-     height: 50vh;
+     height: 60vh;
      max-width: 100%;
      /* background-position: center; */
      background-repeat: no-repeat;
      background-size: cover;
      position: relative;
-     background-image: url("../img/user/background.png");
+     background-image: url("../img/background.png");
  }
 
-#Usermaincontent {
-    margin-top: 10vh;
-    margin-bottom: 10vh;
+#UserFooter {
+    padding-left: 0;
+    padding-right: 0;
 }
 
-#Usermaincontent img {
-    max-width: 25%;
-    height: auto;
-
-    display: block;
-    margin-left: auto;
-    margin-right: auto
-}
-
-#Usermaincontent p {
-    margin-top: 5vh;
-    padding-left: 10%;
-    padding-right: 10%;
-
-    font-family: AvenirNextCondensed-Regular, sans-serif;
-    color: #224862;
-    text-align: center;
-}
 
 .outeruser {
     top: 10vh !important;
@@ -242,11 +229,11 @@ header a:hover, header a:visited, header a:link, header a:active{
 }
 
 #UPCadeauImg {
-    max-width: 15%;
+    max-width: 35%;
     height: auto;
     position: absolute;
-    left: 75vw;
-    bottom: 0;
+    left: 60vw;
+    bottom: -30%;
 }
 
 .UserHR {
@@ -351,7 +338,7 @@ header a:hover, header a:visited, header a:link, header a:active{
 #rowpricing {
     padding-top: 10vh;
     background-color: #1f2546;
-    padding-bottom: 5vh;
+    padding-bottom: 15vh;
 }
 
 #Entetepricing {
@@ -405,7 +392,7 @@ header a:hover, header a:visited, header a:link, header a:active{
 
 
 #Pricingmaincontent h2 {
-    margin-bottom: 5vh;
+    margin-bottom: 10vh;
 }
 
 #Pricingmaincontent .col-12, #Pricingmaincontent .col-md-4 {
@@ -438,19 +425,22 @@ header a:hover, header a:visited, header a:link, header a:active{
     margin-right: 10%;
 }
 .list-group-item img {
-    max-width: 40%;
+    max-width: 38%;
 }
 .ItemVert {
     color : #79e09b;
     font-family: MyriadPro-SemiBold, sans-serif !important;
+    height: 12%;
 }
 .ItemGold {
     color: #f3d55b;
     font-family: MyriadPro-SemiBold, sans-serif !important;
+    height: 12%;
 }
-.ItemJaune {
-    color: #f3d55b;
+.ItemMarron {
+    color: #aa6455;
     font-family: MyriadPro-SemiBold, sans-serif !important;
+    height: 12%;
 }
 .ItemLight {
     font-family: AvenirNextCondensed-UltraLight, sans-serif !important;
@@ -462,6 +452,8 @@ header a:hover, header a:visited, header a:link, header a:active{
     color: white;
     margin-left: -15px !important;
     margin-right: -15px !important;
+    margin-bottom: 0px !important;
+    height: 12%;
 }
 
 .item-Image {
@@ -472,13 +464,16 @@ header a:hover, header a:visited, header a:link, header a:active{
     margin-top: 10%;
 }
 
+#CardGold {
+    height: 115% !important;
+}
+
 #Partenairemaincontent {
-    margin-top: 10vh;
-    margin-bottom: 10vh;
+    margin-top: 20vh;
 }
 
 #Partenairemaincontent img {
-    max-width: 50%;
+    max-width: 100%;
     height: auto;
 
     display: block;
@@ -638,10 +633,16 @@ ul.PartenaireTabs > li.nav-item > a > span {
 .socialnetwork img {
     margin-right: 0.30vw;
     margin-left: 0.30vw;
-    width: 30px;
+    width: 25px;
 
     max-width: 100%;
     height: auto;
+    -webkit-filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1);
+}
+#PricingSN img {
+    filter: none;
+    -webkit-filter: none;
 }
 
 .socialnetwork img:hover {
@@ -690,13 +691,1511 @@ a.nav-link {
 
 /* --------- */
 
+
+
+#MainBottomPartenaire,#MainBottomUser {
+    text-align: left;
+    width: 75%;
+    font-family: AvenirNext-Regular, sans-serif !important;
+    z-index: 2;
+}
+.topcentrePartenaire,.topUser {
+    color: white;
+}
+.topUser h2 {
+    margin-right: 40% !important;
+}
+.topcentrePartenaire h2, .topUser h2 {
+    font-size: 48px; /* 1080p */
+}
+.topcentrePartenaire p, .topUser p{
+    font-size: 18px; /* 1080p */
+    color: #97a4be;
+}
+
+#PartenaireBtn1, #UserBtn1 {
+    font-family: AvenirNext-Regular, sans-serif;
+    text-align: center;
+    background-color: #00fff0;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-radius:8px;
+    color: #233148;
+    margin-bottom: 5%;
+}
+#PartenaireBtn2, #UserBtn2 {
+    background-color: transparent;
+    color: white;
+    border-color: white;
+    margin-left: 5%;
+    margin-bottom: 5%;
+}
+#UserBtn2 {
+    font-family: MyriadPro-Regular, sans-serif;
+    padding-left: 4%;
+    padding-right: 4%;
+}
+.PartenaireBackgroundBleu {
+    background-color: #1f2546;
+}
+.cardPartenaire {
+    margin-left: 1% !important;
+    margin-right: 1%;
+    border-left: 1px solid rgba(0,0,0,0.125) !important;
+}
+#Partenairehr1 {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 3px solid #27e4d0;
+    padding: 0;
+    width: 8%;
+    margin: 4% 0;
+}
+
+
+#Partenairemaincontent .tab-content p {
+    font-family: AvenirNext-Medium, sans-serif !important;
+}
+
+#Partenairemaincontent .tab-content .container {
+    max-width: 100% !important;
+}
+
+#Partenairemaincontent .tab-content p {
+    font-size: 25px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#PartenaireRow2 {
+    margin-bottom: 10vh;
+}
+
+#PartenaireRow2 .card-group {
+    margin: 0 auto;
+}
+#PartenaireRow2 .card-icon {
+    max-width: 50%;
+}
+#PartenaireRow2 .card-body {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.cardPartenaire .card-title {
+    font-family: AvenirNextCondensed-Regular, sans-serif;
+    font-size: 20px;
+    margin-top: 5%;
+    margin-bottom: 0;
+    color: #233148;
+}
+#PartenaireRow2 .card-text {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-top: 3vh;
+    color: #97a4be;
+}
+.PartenaireBackgroundGris {
+    background-color: #f5f6fa;
+}
+#PartenaireRow3-Rowdeux {
+    height: 100%;
+}
+#PartenaireRow3-Rowdeux a {
+    margin: auto auto;
+}
+#PartenaireRow3-Rowdeux img {
+    max-width: 15%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    -webkit-filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1);
+ }
+
+#PartenaireRow3-Rowdeux #lfacebook {
+    left: 50%;
+    top: 30%;
+}
+#PartenaireRow3-Rowdeux #ltwitter {
+    right: 50%;
+    top: 25%;
+}
+#PartenaireRow3-Rowdeux #linstagram {
+    left: 50%;
+    bottom: 30%;
+}
+#PartenaireRow3-Rowdeux #llinkedin {
+    bottom: 30%;
+    right: 50%;
+}
+
+#PartenaireRow3TextDiv {
+    width: 50%;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    text-align: left;
+    margin-left: 15%;
+}
+#PartenaireRow3TextDiv h4 {
+    font-family: AvenirNext-Regular, sans-serif;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: left;
+    margin-bottom: 5vh;
+}
+#PartenaireRow3TextDiv p {
+    text-align: left;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 0;
+    font-family: MyriadPro-Regular, sans-serif;
+}
+#PartenaireRow4 {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+#PartenaireImgRow4 {
+    max-width: 100% !important;
+}
+#PartenaireBtn3 {
+    font-family: AvenirNext-Regular, sans-serif;
+    text-align: center;
+    background-color: #00fff0;
+    padding-left: 10%;
+    padding-right: 10%;
+    border-radius:8px;
+    color: #233148;
+    box-shadow: 0px 1px 10px -1px grey;
+}
+#PartenaireRow4Text {
+    margin-left: 10%;
+    margin-top: 10%;
+    margin-bottom: 5%;
+
+}
+#PartenaireRow4Div {
+    position: absolute;
+    right: 0;
+
+}
+#PartenaireRow4Text li {
+    color: #97a4be;
+    font-family: AvenirNext-Regular, sans-serif;
+    text-align: left;
+    font-size: 14px;
+    margin-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 2%;
+}
+#PartenaireRow4 h4 {
+    text-align: right;
+    text-transform: uppercase;
+    font-family: AvenirNext-Regular, sans-serif;
+}
+#PartenaireRow4 button {
+    float: right;
+    margin-bottom: 4%;
+}
+#PartenaireRow4 .col-md-5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+}
+#PartenaireRow5 .col-md-5 img {
+    position: absolute;
+    max-width: 80%;
+}
+
+#PartenaireRow5 .box {
+    width: 80% !important;
+    box-shadow: 0px 1px 8px -1px grey;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin: 4% auto;
+
+}
+#PartenaireRow5 .box:hover {
+    background-color: #00fff0;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+
+#PartenaireRow5 .box img {
+    margin-right: 3%;
+    margin-left: 3%;
+}
+
+#PartenaireRow5 .box .BoxText {
+    width: 80%;
+    font-family: AvenirNext-Regular, sans-serif;
+    margin-top: 1%;
+}
+#PartenaireRow5 .box .BoxText p {
+    width: 100%;
+    margin-top: 2%;
+    padding-left: 0;
+    padding-right: 0;
+    font-family: AvenirNext-Regular, sans-serif, sans-serif;
+    color: #233148;
+    text-align: left;
+    font-size: 16px;
+}
+#PartenaireRow5 .BoxBlue {
+    background-color: #00fff0;
+    box-shadow: 0px 0px 7px 0px #00fff0;
+    min-height: 18%;
+}
+#PartenaireRow5 .BoxBlue:hover {
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    box-shadow: 0px 0px 20px 0px #00fff0;
+}
+#PartenaireRow4 ul li {
+    background: url(../img/partenaire/fleche.png) no-repeat left top;
+    padding: 3px 0px 3px 25px;
+    list-style: none;
+}
+#PartenaireRow6 ul li {
+    list-style-image: url('../img/partenaire/Path.png');
+    padding-left: 5%;
+    font-family: AvenirNext-Medium, sans-serif, sans-serif;
+    margin-top: 5%;
+}
+#PartenaireRow6 ul {
+    margin: 5% auto;
+    width: 50%;
+}
+
+#PartenaireRow6 h4 {
+    text-align: right;
+    font-family: AvenirNext-Regular, sans-serif, sans-serif;
+    margin-top: 13%;
+    font-size: 32px;
+}
+
+#PartenaireRow6 ul, #PartenaireRow6 h4  {
+    margin-right: 10%;
+}
+#PartenaireRow6 p {
+    text-align: right;
+    margin-top: 0;
+    padding-left: 20%;
+    font-family: MyriadPro-Regular, sans-serif, sans-serif;
+    font-size: 1vw;
+    line-height: 1.8;
+    color: #97a4be;
+}
+
+#PartenaireRow6 img {
+    position: absolute;
+    margin: 0 auto;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
+
+
+#PartenaireRow8 .col-md-10, #UserRow1 .col-md-10 {
+    background-image: url("../img/partenaire/Map.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+}
+#PartenaireRow8 .col-md-10 h6 {
+    text-align: center;
+    font-family: MyriadPro-Regular, sans-serif;
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+/* tell the container's children to float left: */
+.float-my-children > * {
+    float:left;
+    margin-right:5px;
+}
+
+.clearfix {
+    *zoom:1 /* for IE */
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* end clearfix*/
+
+#PartenaireRow7, #PartenaireRow7 p {
+    color: white;
+    text-align: center;
+    font-family: MyriadPro-Regular, sans-serif;
+    margin-top: 0;
+    padding-right: 15%;
+    padding-left: 15%;
+    font-size: 15px;
+}
+#PartenaireRow7 h6 {
+    font-family: AvenirNext-Regular, sans-serif;
+    margin-bottom: 5%;
+    text-transform: uppercase;
+}
+
+#PButtonWatchVideo {
+    background-image: url("../img/partenaire/Play-Btn.png");
+    height: 77px;
+    width: 77px;
+    background-color: transparent;
+    border: 0px;
+    background-repeat: no-repeat;
+    margin-top: 10%;
+    margin-bottom: 1%;
+}
+#PartenaireRow7 .col-md-10 {
+    padding-bottom: 8%;
+}
+#PartenaireBtn4 {
+    margin: 0 auto;
+    display: block;
+    margin-top: 5%;
+
+    font-family: AvenirNext-Regular, sans-serif;
+    text-align: center;
+    background-color: #00fff0;
+    border-radius:8px;
+    color: black;
+    text-transform: uppercase;
+    box-shadow: 0px 1px 10px -1px grey;
+}
+#PartenaireRow8Div, #UserRow1Div {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 25%;
+}
+
+#PartenaireRow8Div a {
+    text-decoration: none;
+}
+
+
+#PartenaireRow9 .col-md-10 {
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+#PartenaireRow9 .col-md-10 p {
+    color: #00fff1;
+    font-family: AvenirNext-Regular, sans-serif;
+    padding-left: 8%;
+    padding-right: 8%;
+    line-height: 2.5;
+}
+
+#UPFooter #FooterInformation .col-md-2 h6 {
+    color: #233148;
+    font-family: Dosis-Medium, sans-serif;
+}
+#UPFooter #FooterInformation .col-md-2 ul li {
+    margin-top: 4%;
+}
+#UPFooter #FooterInformation .col-md-2 ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    margin-top: 1%;
+    font-family: Dosis-Medium, sans-serif;
+}
+#UPFooter #FooterInformation .col-md-2 ul li a {
+    text-decoration: none;
+    color: #97a4be;
+}
+#UPFooter #FooterInformation .col-md-2 {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    margin-top: 4%;
+}
+
+#UPFooter #FooterInformation, #UPFooterNewsletter {
+    padding-bottom: 5%;
+}
+
+#UPFormulaireButtonMail {
+    font-family: AvenirNextCondensed-Regular, sans-serif;
+    text-align: center;
+    background-color: #00fff0;
+    color: #233148;
+    text-transform: uppercase;
+    margin-left: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    box-shadow: 0px 1px 10px -1px grey;
+}
+#UPFooterNewsletter .col-md-10 {
+    text-align: center;
+    font-family: AvenirNext-Regular, sans-serif;
+}
+#UPFooterNewsletter .col-md-10 h6 {
+    font-size: 30px;
+    font-family: AvenirNext-Regular, sans-serif;
+    color: #233148;
+
+}
+#UPFooterNewsletter .col-md-10 span {
+    color: #97a4be;
+    font-family: MyriadPro-Regular, sans-serif;
+}
+#UPFooterNewsletter .col-md-10 input {
+    width: 30%;
+    background-color: #f5f6fa;
+    border: 0px;
+    color: #233148;
+}
+#UPFooterNewsletter .col-md-10 form {
+    margin-top: 3%;
+}
+#UPFooterNetwork {
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+#UPFooterNetwork .col-md-4 span {
+   color: #00fff1;
+    font-family: MyriadPro-Regular, sans-serif;
+}
+#UPFooterNetworkDivImg {
+    text-align: center;
+    margin: auto;
+    font-family: MyriadPro-Regular, sans-serif;
+    -webkit-filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1);
+}
+#UPFooterNetworkDivImg img {
+    width: 28px;
+}
+
+#UPFooterNetwork img {
+    margin: 0 5%;
+}
+
+.UserImgTop {
+    max-width: 18% !important;
+   /* bottom: -20% !important; */
+}
+
+#UserRow1 {
+    margin-top: 10%;
+}
+
+#UserRow1Div h6 {
+    text-align: center;
+    font-family: MyriadPro-Regular, sans-serif;
+    font-size: 27px;
+}
+
+#UserRow1Div span {
+    text-align: center;
+    font-family: MyriadPro-Regular, sans-serif;
+    font-size:15px;
+    display: block;
+    margin-top: 1%;
+}
+#UserRow1Div form {
+    text-align: center;
+    margin-top: 5%;
+}
+#UserRow1Div input {
+    width: 20%;
+    box-shadow: 0px 1px 10px -1px grey;
+    border:0;
+    height: 35px;
+    padding-left: 5px;
+    font-family: MyriadPro-Regular, sans-serif;
+}
+
+#UserRow1ButtonMail {
+    font-family: AvenirNext-Regular, sans-serif;
+    text-align: center;
+    background-color: #00fff0;
+    color: black;
+    box-shadow: 0px 1px 10px -1px grey;
+    margin-left: -5px;
+}
+
+#UserRow2Div h4 {
+    margin-top: 10%;
+    font-family: AvenirNext-Regular, sans-serif;
+    font-size: 40px;
+    color: #233148;
+}
+#UserRow2Div p {
+    font-family: MyriadPro-Regular, sans-serif;
+    color: #97a4be;
+    text-align: left;
+    padding-left: 0 ;
+    padding-right: 35%;
+    font-size: 18px !important;
+    margin-bottom: 5%;
+    margin-top: 2.5%;
+}
+
+#UserRow2ImgDiv {
+    display: block;
+}
+
+#UserRow2Div {
+    margin-top: 20%;
+}
+
+.UserRow2ImgGoogle, .UserRow2ImgApple {
+    width: 17%;
+    display: inline-block !important;
+    margin-right: 2% !important;
+    margin-bottom: 5%;
+}
+
+#UserImgRow2 {
+    float: right;
+    margin-top: 5%;
+    max-width: 60%;
+    margin-right: 5%;
+}
+
+#UserRow2ImgDownload {
+    font-family: MyriadPro-Regular, sans-serif;
+    text-align: center;
+    background-color: #00fff0;
+    padding-left: 12%;
+    padding-right: 12%;
+    color: black;
+    box-shadow: 0px 1px 10px -1px grey;
+    margin: 0 auto;
+    margin-bottom: -20px;
+    font-size: 22px;
+}
+#UserRow2DownloadA {
+    margin: 0 auto;
+}
+
+
+#UserRow3 {
+    margin-top: 5%;
+    margin-bottom: 3%;
+}
+
+.UserRow3Div h3 {
+    color: #00fff0;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 42px;
+    margin-top: 5%;
+    font-family: AvenirNext-DemiBold, sans-serif;
+}
+.UserRow3Div h6 {
+    font-size: 30px;
+    margin-top: 8%;
+    font-family: AvenirNext-DemiBold, sans-serif;
+}
+.UserRow3Div p {
+    font-family: AvenirNext-Regular, sans-serif;
+    color: #97a4be;
+    text-align: left;
+    padding-right: 30%;
+    margin-top: 5%;
+    font-size: 18px;
+}
+
+.UserRowDivImg {
+    max-width: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.UserSwitch {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    max-width: 8%;
+}
+
+.hiddendiv {
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+.displaynone {
+    display: none;
+}
+
+#UserRow4, #UserRow4 p {
+    color: white;
+    font-family: MyriadPro-Regular, sans-serif;
+    text-align: center;
+}
+
+#UserRow4 p {
+    margin-top: 3%;
+}
+
+
+#UserRow4 .col-md-10 {
+    padding-bottom: 8%;
+}
+
+#UserRow5 .box {
+    width: 90% !important;
+    box-shadow: 0px 0px 2px -1px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin: 4% auto;
+    background-color: white;
+}
+#UserRow5 .box:hover {
+    background-color: #00fff0;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+#UserRow5 .box img {
+    margin-right: 3%;
+    margin-left: 3%;
+}
+
+#UserRow5 .box .BoxText {
+    width: 75%;
+}
+#UserRow5 .box .BoxText p {
+    width: 100%;
+    margin-top: 2%;
+    padding-left: 0;
+    padding-right: 0;
+    font-family: AvenirNext-Regular, sans-serif, sans-serif;
+    color: #224862;
+    text-align: left;
+    font-size: 16px;
+}
+#UserRow5 .BoxBlue {
+    background-color: #00fff0;
+    box-shadow: 0px 0px 7px 0px #00fff0;
+}
+#UserRow5 .BoxBlue:hover {
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    box-shadow: 0px 0px 20px 0px #00fff0;
+}
+
+#UserImgRow5 {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+}
+
+.cardPartenaire a.active {
+ /*   background-color: #1f2546; */
+    box-shadow: 0px 0px 7px -2px grey;
+    border: 1px solid #00fff0;
+}
+/*
+.cardPartenaire a.active > .card-body > .card-title {
+    color: white !important;
+}
+*/
+
+
+#UserRow5 h3 {
+    font-family: AvenirNext-Medium, sans-serif;
+    text-transform: uppercase;
+    margin-top: 10%;
+    font-size: 38px;
+    margin-left: 10%;
+    color: #233148;
+    margin-bottom: 5%;
+}
+
+.nav-link {
+    padding: .5rem 0.5rem !important;
+}
+
+@media all and (max-width: 768px) {
+    #Partenairemaincontent .col-0, #UPFooter .col-0 {
+        display: none;
+    }
+    #PartenaireRow6 ul {
+        float: none;
+        width: 100%;
+    }
+    #PartenaireRow6 h4 {
+        text-align: center;
+    }
+    #PartenaireRow6 p {
+        text-align: center;
+        margin-top: 0;
+        padding-left: 0;
+        font-size: 12px;
+    }
+    #PartenaireRow5 .col-md-5 img {
+        position: inherit;
+    }
+    #PartenaireRow4Div {
+        position: relative;
+    }
+    #Partenairemaincontent p {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    #PartenaireRow2 .card-text {
+        font-size: 14px;
+    }
+    #PartenaireRow2 .card-title {
+        font-size: 14px;
+        margin-top: 1.5vh;
+    }
+    .navbar-collapse {
+        text-align: center;
+    }
+    .navbar-left li, .navbar-right li {
+        margin: 0 auto !important;
+    }
+    #UserImgRow2 {
+        float: none;
+        margin: 0 auto;
+        display: block;
+    }
+    #PartenaireBtn1, #UserBtn1 {
+        margin-bottom: 0;
+    }
+    #PartenaireBtn2, #UserBtn2 {
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+    #UserRow1Div input {
+        width: 50%;
+    }
+    #UserImgRow5 {
+        display: block;
+        margin: 0 auto;
+        top: 0%;
+        max-width: 65%;
+    }
+    .topUser h2 {
+        margin-right: 10% !important;
+    }
+    #MainBottomUser {
+        width: 90%;
+    }
+    #UserRow2Div p {
+        padding-right: 5%;
+    }
+    .UserRow2ImgGoogle, .UserRow2ImgApple {
+        width: 25%;
+    }
+    #CardFlash, #CardFree {
+        margin-top : 0;
+    }
+    #PricingDivCard2 {
+        height: 115%;
+    }
+}
+@media all and (max-width: 330px) {
+    #PartenaireBtn1, #UserBtn1 {
+        margin-bottom: 10%;
+    }
+}
+
 @media all and (max-width: 991px) {
     .navbar-right {
         margin-right: 0px !important;
     }
+
+    #PartenaireRow2 .card-text {
+        font-size: 14px;
+        margin-top: 1.5vh;
+    }
+    #PartenaireRow2 .card-title {
+        font-size: 14px;
+        margin-top: 1.5vh;
+    }
+    #MainBottomPartenaire {
+        width: 100%;
+    }
+    .outeruser {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+@media all and (min-width: 992px) and (max-width: 1200px) {
+    .outeruser {
+        padding-left: 18%;
+        padding-right: 18%;
+    }
+    .topcentrePartenaire h2, .topUser h2 {
+        font-size: 31px;
+    }
+    .topcentrePartenaire p, .topUser p {
+        font-size: 14px;
+        margin-bottom: 15%;
+    }
+    .topcentrePartenaire button {
+        font-size : 12px;
+    }
+    #Partenairemaincontent .tab-content p {
+        font-size: 18px;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+    #PartenaireRow2 .card-title {
+        font-size: 10px;
+        margin-top: 10%;
+    }
+    #PartenaireRow2 .card-text {
+        font-size: 10px;
+    }
+    #PartenaireRow3TextDiv h4 {
+        font-size: 28px;
+    }
+    #PartenaireRow3TextDiv p {
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+    #PartenaireRow3TextDiv {
+        width: 55%;
+    }
+    #PartenaireRow4Text {
+        margin-left: 0;
+    }
+    #PartenaireRow4Text li {
+        font-size: 12px;
+    }
+    #PartenaireRow5 .box .BoxText p {
+        font-size: 13.5px;
+    }
+    #PartenaireRow6 h4 {
+        font-size: 26px;
+    }
+    #PartenaireRow6 ul {
+        width: 60%;
+    }
+    #PartenaireRow6 ul li {
+        font-size: 15px;
+    }
+    #PartenaireRow6 img {
+        max-width: 80%;
+    }
+
+    #PartenaireRow7, #PartenaireRow7 p {
+        padding-right: 10%;
+        padding-left: 10%;
+        font-size: 13px;
+        line-height: 2;
+        margin-bottom: 5px;
+    }
+    #PartenaireRow9 .col-md-10 p {
+        padding-left: 7%;
+        padding-right: 7%;
+        font-size: 15px;
+    }
+}
+
+@media all and (min-width: 1141px) and (max-width: 1200px) {
+    #PartenaireRow5 .box .BoxText p {
+        font-size: 13px;
+    }
+    #PartenaireRow2 .card-text {
+        font-size: 11px;
+    }
+    #PartenaireRow2 .card-title {
+        font-size: 12px;
+        margin-top: 10%;
+    }
+    .topcentrePartenaire h2, .topUser h2 {
+        font-size: 35px;
+    }
+}
+
+@media all and (min-width: 1200px) and (max-width: 1386px) {
+    .outeruser {
+        padding-left: 25%;
+        padding-right: 18%;
+    }
+    .topcentrePartenaire h2, .topUser h2 {
+        font-size: 31px;
+    }
+    .topcentrePartenaire p, .topUser p {
+        font-size: 14px;
+        margin-bottom: 15%;
+    }
+    .topcentrePartenaire button {
+        font-size : 12px;
+    }
+    #Partenairemaincontent .tab-content p {
+        font-size: 18px;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+    #PartenaireRow2 .card-title {
+        font-size: 15px;
+        margin-top: 10%;
+    }
+    #PartenaireRow2 .card-text {
+        font-size: 12.5px;
+    }
+    #PartenaireRow3TextDiv h4 {
+        font-size: 28px;
+    }
+    #PartenaireRow3TextDiv p {
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+    #PartenaireRow3TextDiv {
+        width: 55%;
+    }
+    #PartenaireRow4Text {
+        margin-left: 0;
+    }
+    #PartenaireRow4Text li {
+        font-size: 12px;
+    }
+    #PartenaireRow5 .box .BoxText p {
+        font-size: 14px;
+    }
+    #PartenaireRow6 h4 {
+        font-size: 26px;
+    }
+    #PartenaireRow6 ul {
+        width: 60%;
+    }
+    #PartenaireRow6 ul li {
+        font-size: 15px;
+    }
+    #PartenaireRow6 img {
+        max-width: 80%;
+    }
+    #PartenaireRow7, #PartenaireRow7 p {
+        padding-right: 10%;
+        padding-left: 10%;
+        font-size: 13px;
+        line-height: 2;
+        margin-bottom: 5px;
+    }
+    #PartenaireRow9 .col-md-10 p {
+        padding-left: 7%;
+        padding-right: 7%;
+        font-size: 15px;
+    }
+
+}
+
+@media all and (min-width: 1386px) and (max-width: 1500px) {
+    .outeruser {
+        padding-left: 25%;
+        padding-right: 18%;
+    }
+    .topcentrePartenaire h2, .topUser h2 {
+        font-size: 36px;
+    }
+    .topcentrePartenaire p, .topUser p {
+        font-size: 16px;
+        margin-bottom: 15%;
+    }
+    .topcentrePartenaire button {
+        font-size : 12px;
+    }
+    #Partenairemaincontent .tab-content p {
+        font-size: 18px;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+    #PartenaireRow2 .card-title {
+        font-size: 16px;
+        margin-top: 10%;
+    }
+    #PartenaireRow2 .card-text {
+        font-size: 13px;
+    }
+    #PartenaireRow3TextDiv h4 {
+        font-size: 28px;
+    }
+    #PartenaireRow3TextDiv p {
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+    #PartenaireRow3TextDiv {
+        width: 55%;
+    }
+    #PartenaireRow4Text {
+        margin-left: 0;
+    }
+    #PartenaireRow4Text li {
+        font-size: 12px;
+    }
+    #PartenaireRow5 .box .BoxText p {
+        font-size: 14px;
+    }
+    #PartenaireRow6 h4 {
+        font-size: 26px;
+    }
+    #PartenaireRow6 ul {
+        width: 60%;
+    }
+    #PartenaireRow6 ul li {
+        font-size: 15px;
+    }
+    #PartenaireRow6 img {
+        max-width: 80%;
+    }
+    #PartenaireRow7, #PartenaireRow7 p {
+        padding-right: 10%;
+        padding-left: 10%;
+        font-size: 13px;
+        line-height: 2;
+        margin-bottom: 5px;
+    }
+    #PartenaireRow9 .col-md-10 p {
+        padding-left: 7%;
+        padding-right: 7%;
+        font-size: 15px;
+    }
+
+}
+
+@media all and (min-width: 1500px) and (max-width: 1599px) {
+    .outeruser {
+        padding-left: 25%;
+        padding-right: 18%;
+    }
+    .topcentrePartenaire h2, .topUser h2 {
+        font-size: 40px;
+    }
+    .topcentrePartenaire p, .topUser p {
+        font-size: 15px;
+        margin-bottom: 15%;
+    }
+    .topcentrePartenaire button {
+        font-size : 13px;
+    }
+    #Partenairemaincontent .tab-content p {
+        font-size: 18px;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+    #PartenaireRow2 .card-title {
+        font-size: 17px;
+        margin-top: 10%;
+    }
+    #PartenaireRow2 .card-text {
+        font-size: 14.5px;
+    }
+    #PartenaireRow3TextDiv h4 {
+        font-size: 28px;
+    }
+    #PartenaireRow3TextDiv p {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+    #PartenaireRow3TextDiv {
+        width: 55%;
+    }
+    #PartenaireRow4Text {
+        margin-left: 0;
+    }
+    #PartenaireRow4Text li {
+        font-size: 13px;
+    }
+    #PartenaireRow5 .box .BoxText p {
+        font-size: 15px;
+    }
+    #PartenaireRow6 h4 {
+        font-size: 26px;
+    }
+    #PartenaireRow6 ul {
+        width: 60%;
+    }
+    #PartenaireRow6 ul li {
+        font-size: 15px;
+    }
+
+    #PartenaireRow6 img {
+        max-width: 80%;
+    }
+    #PartenaireRow7, #PartenaireRow7 p {
+        padding-right: 10%;
+        padding-left: 10%;
+        font-size: 15px;
+        line-height: 2;
+        margin-bottom: 5px;
+    }
+    #PartenaireRow9 .col-md-10 p {
+        padding-left: 7%;
+        padding-right: 7%;
+        font-size: 17px;
+    }
+}
+@media all and (min-width: 1600px) and (max-width: 1770px) {
+    .outeruser {
+        padding-left: 25%;
+        padding-right: 18%;
+    }
+    .topcentrePartenaire h2, .topUser h2 {
+        font-size: 46px;
+    }
+    .topcentrePartenaire p, .topUser p {
+        font-size: 18px;
+        margin-bottom: 15%;
+    }
+    .topcentrePartenaire button {
+        font-size : 13px;
+    }
+    #Partenairemaincontent .tab-content p {
+        font-size: 18px;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+    #PartenaireRow2 .card-title {
+        font-size: 18.5px;
+        margin-top: 10%;
+    }
+    #PartenaireRow2 .card-text {
+        font-size: 15.5px;
+    }
+    #PartenaireRow3TextDiv h4 {
+        font-size: 28px;
+    }
+    #PartenaireRow3TextDiv p {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+    #PartenaireRow3TextDiv {
+        width: 55%;
+    }
+    #PartenaireRow4Text {
+        margin-left: 0;
+    }
+    #PartenaireRow4Text li {
+        font-size: 13px;
+    }
+    #PartenaireRow5 .box .BoxText p {
+        font-size: 15px;
+    }
+    #PartenaireRow6 h4 {
+        font-size: 26px;
+    }
+    #PartenaireRow6 ul {
+        width: 60%;
+    }
+    #PartenaireRow6 ul li {
+        font-size: 15px;
+    }
+    #PartenaireRow6 img {
+        max-width: 80%;
+    }
+    #PartenaireRow7, #PartenaireRow7 p {
+        padding-right: 10%;
+        padding-left: 10%;
+        font-size: 15px;
+        line-height: 2;
+        margin-bottom: 5px;
+    }
+    #PartenaireRow9 .col-md-10 p {
+        padding-left: 7%;
+        padding-right: 7%;
+        font-size: 17px;
+    }
+}
+@media all and (min-width: 1770px) and (max-width: 1900px) {
+    .outeruser {
+        padding-left: 25%;
+        padding-right: 18%;
+    }
+    .topcentrePartenaire h2, .topUser h2 {
+        font-size: 51px;
+    }
+    .topcentrePartenaire p, .topUser p {
+        font-size: 23px;
+        margin-bottom: 5%;
+    }
+    .topcentrePartenaire button {
+        font-size : 13px;
+    }
+    #Partenairemaincontent .tab-content p {
+        font-size: 18px;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+    #PartenaireRow2 .card-title {
+        font-size: 21px;
+        margin-top: 10%;
+    }
+    #PartenaireRow2 .card-text {
+        font-size: 17px;
+    }
+    #PartenaireRow3TextDiv h4 {
+        font-size: 28px;
+    }
+    #PartenaireRow3TextDiv p {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    #PartenaireRow3TextDiv {
+        width: 55%;
+    }
+    #PartenaireRow4Text {
+        margin-left: 0;
+    }
+    #PartenaireRow4Text li {
+        font-size: 13px;
+    }
+    #PartenaireRow5 .box .BoxText p {
+        font-size: 15px;
+    }
+    #PartenaireRow6 h4 {
+        font-size: 26px;
+    }
+    #PartenaireRow6 ul {
+        width: 60%;
+    }
+    #PartenaireRow6 ul li {
+        font-size: 15px;
+    }
+    #PartenaireRow6 img {
+        max-width: 80%;
+    }
+    #PartenaireRow7, #PartenaireRow7 p {
+        padding-right: 10%;
+        padding-left: 10%;
+        font-size: 15px;
+        line-height: 2;
+        margin-bottom: 5px;
+    }
+    #PartenaireRow9 .col-md-10 p {
+        padding-left: 7%;
+        padding-right: 7%;
+        font-size: 17px;
+    }
+    #UPCadeauImg {
+        max-width: 30%;
+    }
+}
+
+@media all and (min-width: 1900px) {
+    .outeruser {
+        padding-left: 19%;
+        padding-right: 19%;
+    }
+    .topcentrePartenaire h2, .topUser h2 {
+        font-size: 54px;
+    }
+    .topcentrePartenaire p, .topUser p {
+        font-size: 18px;
+    }
+}
+
+
+@media all and (max-width: 599px)
+{
+    #PartenaireRow9 .col-md-10 p {
+        font-size: 14px;
+    }
+#PartenaireRow3TextDiv {
+width: 75%;
+}
+#ImgBackground {
+height: 500px;
+}
+
+.navbar {
+padding-left: 16px !important;
+}
+header {
+font-size: 12px;
+}
+
+.navbar img {
+padding-right: 48px;
+margin-left: 8px;
+}
+.navbar-left li {
+margin-right: 8px;
+}
+.navbar-right {
+margin-right: 16px;
+}
+.navbar-right li {
+margin-left: 0px;
+}
+
+.btn-boutonnav{
+border-radius: 6px !important;
+width: 80px;
+font-size: 11px !important;
+}
+.topcentre button {
+font-size: 15px;
+}
+.topcentre h2{
+font-size: 18px;
+letter-spacing: 1.8px;
+}
+.topcentre h3{
+font-size: 14px;
+letter-spacing: 1.8px;
+}
+.topcentre p{
+font-size: 15px;
+letter-spacing: 0.4px;
+}
+#maincontent span {
+font-size: 20px;
+top: 52%
+}
+#UserHR1, #UserHR2  {
+width: 28px;
+}
+.footerconfiance h2 {
+font-size: 12px;
+}
+.card {
+width: 300px !important;
+font-size: 25px;
+}
+    #CardGold {
+        width: 350px !important;
+    }
+#Entetepricing h2 {
+font-size: 20px;
+letter-spacing: 1.8px;
+}
+#Entetepricing button {
+font-size: 18px;
+}
+#Usermaincontent hr {
+display: none;
+}
+
+#ImgCadeauEnsemble {
+max-width: 40% !important;
+}
+
+.ImgBuildings {
+max-width: 50% !important;
+}
+
+.cadeaudiv {
+height: 30vh !important;
+}
+
+.btn-boutonnav {
+display: block !important;
+margin: 0 auto;
+
+width: 130px;
+font-size: 15px !important;
+}
+
+#navbarCollapse .nav-link {
+font-size: 18px;
+}
+
+.ImgBuildings {
+bottom: -5vh;
+}
+
+#Pricingmaincontent span {
+font-size: 20px;
+}
+
+.ImgBuildings, #ImgCadeauEnsemble {
+display: none !important;
+}
+.ImgVoiture {
+max-width: 110%;
+}
+
+.mainImgButton1 {
+width: 100px;
+}
+.mainImgButton2 {
+max-width: 130px;
+}
+
+#CardFlash, #CardFree {
+margin-top: 0%;
+}
+
+.socialnetwork img, #socialnetworkIndex img {
+width: 25px;
+}
+
+.socialnetwork img {
+margin-right: 6px;
+margin-left: 6px;
+}
+
+#UPImgBackground {
+height:700px;
+}
+
+#UPCadeauImg {
+bottom: 0;
+}
+
+
+}
+@media all and (max-width: 500px) {
+    #UPImgBackground {
+        height: 500px;
+    }
+    .topcentrePartenaire h2, .topUser h2 {
+        font-size: 28px;
+    }
 }
 
 @media all and (max-width: 400px) {
+    #PartenaireBtn1, #UserBtn1 {
+        margin-bottom: 5%;
+    }
     .ImgBuildings, #ImgCadeauEnsemble {
         display: none !important;
     }
@@ -716,502 +2215,388 @@ a.nav-link {
     #maincontent span {
         top: 68%
     }
-}
-
-@media all and (max-width: 599px)
-{
-    #ImgBackground {
-        height: 500px;
-    }
-
-    .navbar {
-        padding-left: 16px !important;
-    }
-    header {
-        font-size: 12px;
-    }
-
-    .navbar img {
-        padding-right: 48px;
-        margin-left: 8px;
-    }
-    .navbar-left li {
-        margin-right: 8px;
-    }
-    .navbar-right {
-        margin-right: 16px;
-    }
-    .navbar-right li {
-        margin-left: 0px;
-    }
-
-    .btn-boutonnav{
-        border-radius: 6px !important;
-        width: 80px;
-        font-size: 11px !important;
-    }
-    .topcentre button {
-        font-size: 15px;
-    }
-    .topcentre h2{
-        font-size: 18px;
-        letter-spacing: 1.8px;
-    }
-    .topcentre h3{
-        font-size: 14px;
-        letter-spacing: 1.8px;
-    }
-    .topcentre p{
-        font-size: 15px;
-        letter-spacing: 0.4px;
-    }
-    #maincontent span {
-        font-size: 20px;
-        top: 52%
-    }
-    #Usermaincontent p {
-        font-size: 18px;
-    }
-    #UserHR1, #UserHR2  {
-        width: 28px;
-    }
-    .footerconfiance h2 {
-        font-size: 12px;
-    }
-    .card {
-        width: 300px !important;
-        font-size: 25px;
-    }
-    #Entetepricing h2 {
-        font-size: 20px;
-        letter-spacing: 1.8px;
-    }
-    #Entetepricing button {
-        font-size: 18px;
-    }
-    #Usermaincontent hr {
-        display: none;
-    }
-
-    #ImgCadeauEnsemble {
-        max-width: 40% !important;
-    }
-
-    .ImgBuildings {
-        max-width: 50% !important;
-    }
-
-    .cadeaudiv {
-        height: 30vh !important;
-    }
-
-    .btn-boutonnav {
-        display: block !important;
-        margin: 0 auto;
-
-        width: 130px;
-        font-size: 15px !important;
-    }
-
-    #navbarCollapse .nav-link {
-        font-size: 18px;
-    }
-
-    .ImgBuildings {
-        bottom: -5vh;
-    }
-
-    #Pricingmaincontent span {
-        font-size: 20px;
-    }
-
-    .ImgBuildings, #ImgCadeauEnsemble {
-        display: none !important;
-    }
-    .ImgVoiture {
-        max-width: 110%;
-    }
-
-    .mainImgButton1 {
-        width: 100px;
-    }
-    .mainImgButton2 {
-        max-width: 130px;
-    }
-
-    #CardFlash, #CardFree {
-        margin-top: 0%;
-    }
-
-    .socialnetwork img, #socialnetworkIndex img {
-        width: 25px;
-    }
-
-    .socialnetwork img {
-        margin-right: 6px;
-        margin-left: 6px;
-    }
 
     #UPImgBackground {
-        height:55vh;
+        height: 500px;
+    }
+    #CardGold {
+        width: 95% !important;
+    }
+    #PartenaireRow5 .box .BoxText {
+        width: 75%;
+        font-size: 12px;
+    }
+    #PartenaireRow5 .box .BoxText p {
+        font-size: 12px;
     }
 
+    .card {
+        width: 85% !important;
+        font-size: 20px;
+    }
 
+    .UserRow2ImgGoogle, .UserRow2ImgApple {
+        width: 30%;
+    }
 }
 
 @media all and (min-width: 600px) and (max-width: 899px)
 {
-    #ImgBackground {
-        height: 500px;
-    }
+#ImgBackground {
+height: 500px;
+}
 
-    .navbar {
-        padding-left: 24px !important;
-    }
+.navbar {
+padding-left: 24px !important;
+}
 
-    header {
-        font-size: 14px;
-    }
+header {
+font-size: 14px;
+}
 
-    .navbar img {
-        padding-right: 72px;
-        margin-left: 12px;
-    }
-    .navbar-left li {
-        margin-right: 12px;
-    }
-    .navbar-right {
-        margin-right: 24px;
-    }
-    .navbar-right li {
-        margin-left: 0px;
-    }
+.navbar img {
+padding-right: 72px;
+margin-left: 12px;
+}
+.navbar-left li {
+margin-right: 12px;
+}
+.navbar-right {
+margin-right: 24px;
+}
+.navbar-right li {
+margin-left: 0px;
+}
 
-    .btn-boutonnav{
-        border-radius: 9px !important;
-        width: 100px;
-        font-size: 14px !important;
+.btn-boutonnav{
+border-radius: 9px !important;
+width: 100px;
+font-size: 14px !important;
+}
+.topcentre button {
+font-size: 16px;
+}
+.topcentre h2{
+font-size: 25px;
+letter-spacing: 2.4px;
+}
+.topcentre h3{
+font-size: 20px;
+letter-spacing: 2.2px;
+}
+.topcentre p{
+font-size: 16px;
+letter-spacing: 0.6px;
+}
+#maincontent span {
+font-size: 25px;
+top : 70%
+}
+#UserHR1, #UserHR2  {
+width: 42px;
+}
+.footerconfiance h2 {
+font-size: 16px;
+}
+.card {
+width: 350px !important;
+font-size: 25px;
+}
+    #CardGold {
+        width: 400px !important;
     }
-    .topcentre button {
-        font-size: 16px;
-    }
-    .topcentre h2{
-        font-size: 25px;
-        letter-spacing: 2.4px;
-    }
-    .topcentre h3{
-        font-size: 20px;
-        letter-spacing: 2.2px;
-    }
-    .topcentre p{
-        font-size: 16px;
-        letter-spacing: 0.6px;
-    }
-    #maincontent span {
-        font-size: 25px;
-        top : 70%
-    }
-    #Usermaincontent p {
-        font-size: 20px;
-    }
-    #UserHR1, #UserHR2  {
-        width: 42px;
-    }
-    .footerconfiance h2 {
-        font-size: 16px;
-    }
-    .card {
-        width: 350px !important;
-        font-size: 25px;
-    }
-    #Entetepricing h2 {
-        font-size: 30px;
-        letter-spacing: 2.4px;
-    }
-    #Entetepricing button {
-        font-size: 20px;
-    }
-    #Usermaincontent hr {
-        display: none;
-    }
-
-
-    #ImgCadeauEnsemble {
-        max-width: 40% !important;
-    }
-
-    .ImgBuildings {
-        max-width: 50% !important;
-    }
-
-    .cadeaudiv {
-        height: 40vh !important;
-    }
-
-    #Pricingmaincontent span {
-        font-size: 22px;
-    }
+#Entetepricing h2 {
+font-size: 30px;
+letter-spacing: 2.4px;
+}
+#Entetepricing button {
+font-size: 20px;
+}
+#Usermaincontent hr {
+display: none;
+}
 
 
-    .mainImgButton1 {
-        width: 110px;
-    }
-    .mainImgButton2 {
-        max-width: 135px;
-    }
+#ImgCadeauEnsemble {
+max-width: 40% !important;
+}
+
+.ImgBuildings {
+max-width: 50% !important;
+}
+
+.cadeaudiv {
+height: 40vh !important;
+}
+
+#Pricingmaincontent span {
+font-size: 22px;
+}
+
+
+.mainImgButton1 {
+width: 110px;
+}
+.mainImgButton2 {
+max-width: 135px;
+}
 
 }
 
 @media all and (min-width: 600px) and (max-width: 767px) {
-    #navbarCollapse .nav-link {
-        font-size: 18px;
-    }
+#navbarCollapse .nav-link {
+font-size: 18px;
+}
 
-    .btn-boutonnav {
-        display: block !important;
-        margin: 0 auto;
+.btn-boutonnav {
+display: block !important;
+margin: 0 auto;
 
-        width: 150px;
-        font-size: 18px !important;
-    }
+width: 150px;
+font-size: 18px !important;
+}
 
-    .ImgBuildings {
-        bottom: -5vh;
-    }
+.ImgBuildings {
+bottom: -5vh;
+}
 
-    .ImgBuildings, #ImgCadeauEnsemble {
-        display: none !important;
-    }
-    .ImgVoiture {
-        max-width: 85% !important;
-    }
+.ImgBuildings, #ImgCadeauEnsemble {
+display: none !important;
+}
+.ImgVoiture {
+max-width: 85% !important;
+}
 
-    .mainImgButton1 {
-        width: 150px;
-    }
-    .mainImgButton2 {
-        max-width: 180px;
-    }
+.mainImgButton1 {
+width: 150px;
+}
+.mainImgButton2 {
+max-width: 180px;
+}
 
-    #CardFlash, #CardFree {
-        margin-top: 0;
-    }
+#CardFlash, #CardFree {
+margin-top: 0;
+}
 
-    #maincontent span {
-        top: 70%
-    }
+#maincontent span {
+top: 70%
+}
 
 }
 
 
 @media all and (min-width: 767px) and (max-width: 899px) {
-    #PricingPrix {
-        width: 100% !important;
+#PricingPrix {
+width: 100% !important;
+}
+
+.card {
+width: 200px !important;
+font-size: 22px;
+}
+
+    #CardGold {
+        width: 230px !important;
     }
 
-    .card {
-        width: 240px !important;
-        font-size: 22px;
-    }
+#Usermaincontent hr {
+display: block;
+}
 
-    #Usermaincontent hr {
-        display: block;
-    }
+.cadeaudiv {
+height: 60vh !important;
+}
 
-    .cadeaudiv {
-        height: 60vh !important;
-    }
+.navbar-right li {
+margin-left: 24px;
+}
 
-    .navbar-right li {
-        margin-left: 24px;
-    }
-
-    #maincontent span {
-        top: 80%
-    }
+#maincontent span {
+top: 80%
+}
 }
 
 @media all and (min-width: 900px) and (max-width: 1199px)
 {
-    #ImgBackground {
-        height: 500px;
-    }
+#ImgBackground {
+height: 500px;
+}
 
-    .navbar {
-        padding-left: 36px !important;
-    }
+.navbar {
+padding-left: 36px !important;
+}
 
-    header {
-        font-size: 16px;
-    }
+header {
+font-size: 16px;
+}
 
-    .navbar img {
-        padding-right: 108px;
-        margin-left: 18px;
+.navbar img {
+padding-right: 108px;
+margin-left: 18px;
+}
+.navbar-left li {
+margin-right: 18px;
+}
+.navbar-right {
+margin-right: 36px;
+}
+.navbar-right li {
+margin-left: 36px;
+}
+.mainImgButton1 {
+width: 112.5px;
+}
+.mainImgButton2 {
+max-width: 135px;
+}
+.btn-boutonnav{
+border-radius: 12px !important;
+width: 120px;
+font-size: 16px !important;
+}
+.topcentre button {
+font-size: 20px;
+}
+.topcentre h2{
+font-size: 20px;
+letter-spacing: 3.6px;
+}
+.topcentre h3{
+font-size: 17px;
+letter-spacing: 3.2px;
+}
+.topcentre p{
+font-size: 18px;
+letter-spacing: 0.9px;
+}
+#maincontent span {
+font-size: 30px;
+top : 77%
+}
+#UserHR1, #UserHR2  {
+width: 63px;
+}
+.footerconfiance h2 {
+font-size: 25px;
+}
+.card {
+    width: 240px !important;
+    font-size: 24px;
+}
+    #CardGold {
+        width: 280px !important;
     }
-    .navbar-left li {
-        margin-right: 18px;
-    }
-    .navbar-right {
-        margin-right: 36px;
-    }
-    .navbar-right li {
-        margin-left: 36px;
-    }
-    .mainImgButton1 {
-        width: 112.5px;
-    }
-    .mainImgButton2 {
-        max-width: 135px;
-    }
-    .btn-boutonnav{
-        border-radius: 12px !important;
-        width: 120px;
-        font-size: 16px !important;
-    }
-    .topcentre button {
-        font-size: 20px;
-    }
-    .topcentre h2{
-        font-size: 20px;
-        letter-spacing: 3.6px;
-    }
-    .topcentre h3{
-        font-size: 17px;
-        letter-spacing: 3.2px;
-    }
-    .topcentre p{
-        font-size: 18px;
-        letter-spacing: 0.9px;
-    }
-    #maincontent span {
-        font-size: 30px;
-        top : 77%
-    }
-    #Usermaincontent p {
-        font-size: 18px;
-    }
-    #UserHR1, #UserHR2  {
-        width: 63px;
-    }
-    .footerconfiance h2 {
-        font-size: 25px;
-    }
-    .card {
-        width: 260px !important;
-        font-size: 24px;
-    }
-    #Entetepricing h2 {
-        font-size: 16px;
-        letter-spacing: 3.6px;
-    }
-    #Entetepricing button {
-        font-size: 15px;
-    }
+#Entetepricing h2 {
+font-size: 16px;
+letter-spacing: 3.6px;
+}
+#Entetepricing button {
+font-size: 15px;
+}
 
-    #PricingPrix {
-        width: 100% !important;
-    }
+#PricingPrix {
+width: 100% !important;
+}
 
-    #Pricingmaincontent span {
-        font-size: 25px;
-    }
+#Pricingmaincontent span {
+font-size: 25px;
+}
 }
 
 @media all and (min-width: 1200px) and (max-width: 1799px)
 {
-    #ImgBackground {
-        height: 600px;
-    }
-    .navbar {
-        padding-left: 48px !important;
-    }
-    header {
-        font-size: 18px;
-    }
-    .navbar img {
-        padding-right: 144px;
-        margin-left: 24px;
-    }
-    .navbar-left li {
-        margin-right: 24px;
-    }
-    .navbar-right {
-        margin-right: 48px;
-    }
-    .navbar-right li {
-        margin-left: 48px;
-    }
-    .mainImgButton1 {
-        width: 150px;
-    }
-    .mainImgButton2 {
-        max-width: 180px;
-    }
-    .btn-boutonnav{
-        border-radius: 18px !important;
-        width: 132px;
-        font-size: 18px !important;
-    }
+#ImgBackground {
+height: 600px;
+}
+.navbar {
+padding-left: 48px !important;
+}
+header {
+font-size: 18px;
+}
+.navbar img {
+padding-right: 144px;
+margin-left: 24px;
+}
+.navbar-left li {
+margin-right: 24px;
+}
+.navbar-right {
+margin-right: 48px;
+}
+.navbar-right li {
+margin-left: 48px;
+}
+.mainImgButton1 {
+width: 150px;
+}
+.mainImgButton2 {
+max-width: 180px;
+}
+.btn-boutonnav{
+border-radius: 18px !important;
+width: 132px;
+font-size: 18px !important;
+}
 
-    .topcentre button {
-        font-size: 25px;
-    }
+.topcentre button {
+font-size: 25px;
+}
 
-    .topcentre h2{
-        font-size: 24px;
-        letter-spacing: 7px;
-    }
+.topcentre h2{
+font-size: 24px;
+letter-spacing: 7px;
+}
 
-    .topcentre h3{
-        font-size: 17px;
-        letter-spacing: 4px;
-        font-weight: 600;
-    }
-    .topcentre p{
-        font-size: 19px;
-        letter-spacing: 1.2px;
-    }
-    #maincontent span {
-        font-size: 35px;
-    }
-    #Usermaincontent p {
-        font-size: 22px;
-    }
-    #UserHR1, #UserHR2  {
-        width: 84px;
-    }
-    .footerconfiance h2 {
-        font-size: 33px;
-    }
-    .card {
-        width: 300px !important;
-        font-size: 18px;
-    }
+.topcentre h3{
+font-size: 17px;
+letter-spacing: 4px;
+font-weight: 600;
+}
+.topcentre p{
+font-size: 19px;
+letter-spacing: 1.2px;
+}
+#maincontent span {
+font-size: 35px;
+}
+#UserHR1, #UserHR2  {
+width: 84px;
+}
+.footerconfiance h2 {
+font-size: 33px;
+}
+.card {
+width: 300px !important;
+font-size: 18px;
+}
+#CardGold {
+    width: 350px !important;
+}
 
-    #Entetepricing h2 {
-        font-size: 21px;
-        letter-spacing: 4.8px;
-    }
-    #Entetepricing button {
-        font-size: 20px;
-    }
+#Entetepricing h2 {
+font-size: 21px;
+letter-spacing: 4.8px;
+}
+#Entetepricing button {
+font-size: 20px;
+}
 
-    #PricingPrix {
-        width: 100% !important;
-    }
+#PricingPrix {
+width: 100% !important;
+}
 
-    #Pricingmaincontent span {
-        font-size: 30px;
-    }
+#Pricingmaincontent span {
+font-size: 22px;
+}
 }
 
 @media all and (min-width: 1800px)
 {
- /*
- Width : 1903
- Height : 943
-  */
+/*
+Width : 1903
+Height : 943
+*/
     #ImgBackground {
         height: 755px;
     }
@@ -1269,9 +2654,6 @@ a.nav-link {
     #maincontent span {
         font-size: 40px;
     }
-    #Usermaincontent p {
-        font-size: 32px;
-    }
     #UserHR1, #UserHR2  {
         width: 126px;
     }
@@ -1296,7 +2678,7 @@ a.nav-link {
     }
 
     #Pricingmaincontent span {
-        font-size: 32px;
+        font-size: 26px;
     }
 }
 

@@ -117,10 +117,10 @@
                 <div class="row" id="rowNetwork">
                     <div class="site-info col-sm-12">
                         <div class="socialnetwork" id="socialnetworkIndex">
-                            <a href="https://www.facebook.com/Marginals.Lab" target="_blank"><img src="img/socialnetworks/facebook.png" alt="Facebook"></a>
-                            <a href="https://twitter.com/Marginals_Lab" target="_blank"><img src="img/socialnetworks/twitter.png" alt="Twitter"></a>
-                            <a href="https://www.instagram.com/marginals_lab/" target="_blank"><img src="img/socialnetworks/instagram.png" alt="Instagram"></a>
-                            <a href="https://www.linkedin.com/company/marginals-lab/" target="_blank"><img src="img/socialnetworks/linkedin.png" alt="Linkedin"></a>
+                            <a href="https://www.facebook.com/Applisammy/" target="_blank"><img src="img/socialnetworks/facebook.png" alt="Facebook"></a>
+                            <a href="https://twitter.com/applisammy" target="_blank"><img src="img/socialnetworks/twitter.png" alt="Twitter"></a>
+                            <a href="https://www.instagram.com/applisammy/?hl=fr" target="_blank"><img src="img/socialnetworks/instagram.png" alt="Instagram"></a>
+                            <a href="https://www.linkedin.com/company/applisammy/" target="_blank"><img src="img/socialnetworks/linkedin.png" alt="Linkedin"></a>
                         </div>
 
                     </div>
@@ -386,6 +386,20 @@
             document.getElementById("ImgFleche").classList.add('ImgDisplayNone');
         }, 1000);
     }
+
+    function getTimeToInteractive() {
+
+        const requestStart = window.performance.timing.requestStart;
+        const domInteractive = window.performance.timing.domInteractive;
+        return domInteractive - requestStart;
+
+    }
+
+    $(document).ready(function() {
+        console.log("TTI : " + getTimeToInteractive())
+    });
+
+
 </script>
 </body>
 </html>

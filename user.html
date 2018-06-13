@@ -22,14 +22,25 @@
 
         var onResize = function() {
             $("body").css("padding-top", $(".navbar-expand-md").height());
+            if ( $("html").width() > 767) {
+                $("#UserImgRow5").css("height", $("#UserRow5DivBox").height());
+                $("#UserRow5DivImg").css("height", $("#UserRow5DivBox").height());
+            } else {
+                $("#UserImgRow5").css("height", 500);
+                $("#UserRow5DivImg").css("height", 500);
+                console.log($("html").height())
+            }
         };
 
         $(window).resize(onResize);
 
-        $(function() {
+
+        $(document).ready(function() {
             onResize();
         });
     </script>
+
+
 
 </head>
 <body>
@@ -86,77 +97,422 @@
 
 <div id="UPImgBackground">
 
-
-    <div class="MainBottom outeruser">
-        <div class="topcentre">
-            <h2 class="margincentered">Don't Worry, Just Sammy</h2> <br> <br>
-            <button class="btn btn-boutoncentre margincentered" type="button">Telecharger l'Appli</button>
-            <p>Avec Sammy fini les problèmes en fin de soirée, et en plus tu gagnes des récompenses. C'est gratuit, alors qu'est-ce que tu attends ?</p>
+    <div class="MainBottom outeruser" id="MainBottomUser">
+        <div class="topUser">
+            <h2 class="margincentered">Don't Worry Just Sammy !</h2><br>
+            <p>Avec Sammy fini les problèmes en fin de soirée, et en plus tu gagnes des récompenses. C'est gratuit, alors qu'est-ce que tu attends ?</p><br><br>
+            <a href="#"><button class="btn" id="UserBtn1" type="button">Télécharger l'app</button></a>
+            <a href="#" target="_blank"><button class="btn" id="UserBtn2" type="button">Se connecter</button></a>
         </div>
     </div>
 
-    <img src="img/user/Utilisateurs.png" alt="Utilisateur" id="UPCadeauImg">
+    <img src="img/user/HomeCentered.png" alt="Partenaire" class="UserImgTop" id="UPCadeauImg">
+
+
 
 </div>
 
 <div class="container-fluid" id="Usermaincontent">
-    <div class="row">
-        <div class="col-1"></div>
+    <div class="row" id="UserRow1">
+        <!-- Une image !!!! -->
+        <div class="col-md-1 col-0"></div>
 
-        <div class="col-10">
-            <div class="row vdivide">
+        <div class="col-md-10 col-12">
 
-                <hr id="UserHR1">
-                <hr id="UserHR2">
+            <div id="UserRow1Div">
+                <h6>Deviens Bêta-Testeur et obtiens l'appli en avant première !</h6>
+                <span>De plus, en devenant parrain de Sammy tu gagnes de nombreux avantages</span>
 
-                <div class="col-12 col-md-4">
-                    <div class="margincentered">
-                        <img src="img/user/Groupe.png" alt="Groupe">
-                    </div>
-                    <p class="margincentered">Une fois inscrit sur l’application, créez un groupe avec vos amis, désignez
-                        un Sam et partez faire la fête !</p>
-                </div>
-
-
-                <div class="col-12 col-md-4">
-                    <div class="margincentered">
-                        <img src="img/user/Voiture.png" alt="Voiture">
-                    </div>
-                    <p class="margincentered">Après la soirée, Sam raccompagne ses amis chez eux. Pour le remercier de sa
-                        bonne action une récompense l’attend !</p>
-                </div>
-
-                <div class="col-12 col-md-4">
-                    <div class="margincentered">
-                        <img src="img/user/Panier.png" alt="Panier">
-                    </div>
-                    <p class="margincentered">Ses amis lui offriront des crédits que Sam échangera contre une multitude
-                        d’offres promotionnelles sur le store de l’application.</p>
-                </div>
+                <form action="#" method="post">
+                    <input type="email" name="mail" placeholder="Adresse Email">
+                    <button class="btn" type="submit" id="UserRow1ButtonMail">Je m'inscris !</button>
+                </form>
             </div>
         </div>
 
+        <div class="col-md-1 col-0"></div>
 
-
-        <div class="col-1"></div>
     </div>
+
+
+    <div class="row PartenaireBackgroundGris" id="UserRow2">
+
+        <div class="col-md-1 col-0 col-0"></div>
+
+        <div class="col-md-10 col-12 col-md-12">
+            <div class="row">
+
+                <div class="col-md-6 col-12">
+                    <img src="img/user/ecran-mon-groupe.png" alt="Ecran Mon Groupe" id="UserImgRow2">
+                </div>
+
+                <div class="col-md-6 col-12">
+                    <div id="UserRow2Div">
+                        <h4>Déja disponible !</h4>
+                        <p>Ceci est un texte vraiment innovant qui permet à des individus de voir comment cela va rendre un écran de type lumineux. Cependant, ces mêmes individus souhaitent François Ruffin en tant que Président de la République, et ça c'est cool</p>
+                        <div id="UserRow2ImgDiv">
+                            <a href='#' target="_blank"><img class="UserRow2ImgApple" alt='Disponible sur Apple Store' src='img/user/AppleStore-1.svg'/></a>
+                            <a href='https://play.google.com/store/apps/details?id=witman.sammy&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' target="_blank"><img class="UserRow2ImgGoogle" alt='Disponible sur Google Play' src='img/user/googleplaygood.png'/></a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" id="UserRow2DownloadA"><button class="btn" id="UserRow2ImgDownload" type="button">Télécharger l'application</button></a>
+
+            </div>
+        </div>
+
+        <div class="col-md-1 col-0 col-0"></div>
+
+    </div>
+
+    <div class="row" id="UserRow3">
+        <div class="col-12" id="div1">
+            <div class="row">
+
+                <div class="col-md-6 col-12" id="UserRow3Img1Div">
+                    <img src="img/user/Isometric-Computer.png" alt="Image" id="UserRow3Div1Img" class="UserRowDivImg">
+                </div>
+
+                <div class="col-md-6 col-12">
+                    <div id="UserRow3Div1" class="UserRow3Div">
+                        <h3>Sammy, c'est quoi ?</h3>
+                        <h6>"L'appli qui fait la fête avec toi ! "</h6>
+                        <p>Sammy est la première solution entièrement grauite qui va vous permettre de rentrer de soirée en sécurité tout en gagnant du pouvoir d'achat ! En revisitant le concept du Sam cette application offre une vraie alternative innovante à l'ensemble à l'ensemble des fêtards.</p>
+                    </div>
+                </div>
+
+
+                <img src="img/user/switch.png" alt="fleche" class="UserSwitch">
+
+            </div>
+
+        </div>
+        <div class="col-12 displaynone hiddendiv" id="div2">
+            <div class="row">
+
+                <div class="col-md-6 col-12" id="UserRow3Img2Div">
+                    <img src="img/user/Isometric-people.png" alt="Image" id="UserRow3Div2Img" class="UserRowDivImg">
+                </div>
+
+                <div class="col-md-6 col-12">
+                    <div id="2" class="UserRow3Div">
+                        <h3>Comment ça marche ?</h3>
+                        <h6>1 - Designe ton Sam</h6>
+                        <p>Télecharge l'application, invite tes amis à une soirée en constituant un groupe. Ensuite, tu choisis un Sam parmis ton groupe et pars t'éclater !</p>
+                    </div>
+                </div>
+
+                <img src="img/user/switch.png" alt="fleche" class="UserSwitch">
+
+            </div>
+        </div>
+        <div class="col-12 displaynone hiddendiv" id="div3">
+            <div class="row">
+
+                <div class="col-md-6 col-12" id="UserRow3Img3Div">
+                    <img src="img/user/sammy-isometric-car.png" alt="Image" id="UserRow3Div3Img" class="UserRowDivImg">
+                </div>
+
+                <div class="col-md-6 col-12">
+                    <div id="UserRow3Div3" class="UserRow3Div">
+                        <h3>Comment ça marche ?</h3>
+                        <h6>2 - Pars t'éclater en soirée</h6>
+                        <p>Tu peux profiter à fond de ta soirée, ton Sam te ramène chez toi en parfaite sécurité. Le lendemain tu as juste à noter la qualité de ton trajet et le tour est joué ! C'est aussi simple que ça Sammy !</p>
+                    </div>
+                </div>
+
+                <img src="img/user/switch.png" alt="fleche" class="UserSwitch">
+
+            </div>
+        </div>
+        <div class="col-12 displaynone hiddendiv" id="div4" >
+            <div class="row">
+
+                <div class="col-md-6 col-12" id="UserRow3Img4Div">
+                    <img src="img/user/Gift.png" alt="Image" id="UserRow3Div4Img" class="UserRowDivImg">
+                </div>
+
+                <div class="col-md-6 col-12">
+                    <div id="UserRow3Div4" class="UserRow3Div">
+                        <h3>Comment ça marche ?</h3>
+                        <h6>3 - Gagne des récompenses</h6>
+                        <p>En échange de leurs bonnes actions, les Sam gagnent des crédits, les "Helo" qu'ils pourront échanger contre une multitude d'offres promotionnelles chez nos partenaires.</p>
+                    </div>
+                </div>
+
+                <img src="img/user/switch.png" alt="fleche" class="UserSwitch">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row PartenaireBackgroundBleu" id="UserRow4">
+
+        <div class="col-md-1 col-0"></div>
+
+        <div class="col-md-10 col-12">
+
+            <a href="#" target="_blank"><button id="PButtonWatchVideo"></button></a>
+
+            <h6>Regardez la vidéo</h6>
+            <p>Découvre ton application favorite en vidéo !</p>
+
+        </div>
+
+        <div class="col-md-1 col-0"></div>
+
+    </div>
+
+    <div class="row PartenaireBackgroundGris" id="UserRow5">
+
+        <div class="col-md-1 col-0"></div>
+
+        <div class="col-md-10 col-12">
+            <div class="row">
+
+                <div class="col-md-7 col-12" id="UserRow5DivBox">
+
+                    <h3>Nos avantages</h3>
+
+                    <div class="box clearfix float-my-children">
+                        <img src="img/user/piggy-bank.png" alt="piggy-bank">
+                        <div class="BoxText">
+                            <span>Gratuit</span>
+                            <p>Pour permettre à chacun de renter en sécurité, nous avons développé une solution entièrement gratuite.</p>
+                        </div>
+                    </div>
+
+                    <div class="box clearfix float-my-children">
+                        <img src="img/user/thumb-up.png" alt="thumb-up">
+                        <div class="BoxText">
+                            <span>Simple</span>
+                            <p>Pour te permettre de profiter au mieux de tes soirées, Sammy est une application simple à utiliser et discrète.</p>
+                        </div>
+                    </div>
+
+                    <div class="box clearfix float-my-children">
+                        <img src="img/user/car-insurance.png" alt="car-insurance">
+                        <div class="BoxText">
+                            <span>Safe</span>
+                            <p>Avec notre système de notation des Sam nous te garantissons un retour sans aléa et en parfaite sécurité.</p>
+                        </div>
+                    </div>
+
+                    <div class="box clearfix float-my-children">
+                        <img src="img/user/discount.png" alt="discount">
+                        <div class="BoxText">
+                            <span>Économique</span>
+                            <p>Échange tes crédits contre des multitudes d'offres promotionnelles diverses et variées de nos partenaires.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-5 col-12" id="UserRow5DivImg">
+                    <img src="img/user/Écran-profil.png" alt="Ecran profil" id="UserImgRow5">
+                </div>
+
+                <div class="col-12">
+
+            </div>
+        </div>
+
+        <div class="col-md-1 col-0"></div>
+
+    </div>
+
 </div>
 
-<footer id="footerinfo" class="site-footer" role="contentinfo">
-    <div class="container footer-inner">
+<div class="container-fluid" id="UserFooter">
+    <footer class="site-footer" id="UPFooter">
+
         <div class="row">
-            <div class="site-info col-sm-12">
-                <div class="socialnetwork">
-                    <a href="https://www.facebook.com/Marginals.Lab" target="_blank"><img src="img/socialnetworks/facebook.png" alt="Facebook"></a>
-                    <a href="https://twitter.com/Marginals_Lab" target="_blank"><img src="img/socialnetworks/twitter.png" alt="Twitter"></a>
-                    <a href="https://www.instagram.com/marginals_lab/" target="_blank"><img src="img/socialnetworks/instagram.png" alt="Instagram"></a>
-                    <a href="https://www.linkedin.com/company/marginals-lab/" target="_blank"><img src="img/socialnetworks/linkedin.png" alt="Linkedin"></a>
+            <div class="col-md-1 col-0"></div>
+
+            <div class="col-md-10 col-12">
+                <div class="row" id="FooterInformation">
+                    <div class="col-md-2 col-0"></div>
+
+                    <div class="col-md-2 col-6">
+                        <h6>Company</h6>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Jobs</a></li>
+                            <li><a href="#">Press</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-2 col-6">
+                        <h6>Development</h6>
+                        <ul>
+                            <li><a href="#">IOS</a></li>
+                            <li><a href="#">Android</a></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="col-md-2 col-6">
+                        <h6>Community</h6>
+                        <ul>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-2 col-6">
+                        <h6>Info</h6>
+                        <ul>
+                            <li><a href="#">Terms of service</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-2 col-0"></div>
+
                 </div>
 
             </div>
+
+            <div class="col-md-1 col-0"></div>
         </div>
-    </div>
-</footer>
+
+        <div class="row" id="UPFooterNewsletter">
+            <div class="col-md-1 col-0"></div>
+
+            <div class="col-md-10 col-12">
+                <h6>Restez informé</h6>
+                <span>Inscrivez-vous à la newsletter pour recevoir des informations sur l'application</span>
+
+                <form action="#" method="post">
+                    <input type="email" name="mail">
+                    <button class="btn" type="submit" id="UPFormulaireButtonMail">S'inscrire</button>
+                </form>
+
+            </div>
+
+            <div class="col-md-1 col-0"></div>
+        </div>
+
+        <div class="row PartenaireBackgroundBleu" id="UPFooterNetwork">
+            <div class="col-md-1 col-0"></div>
+
+            <div class="col-md-10 col-12">
+
+                <div class="row">
+                    <div class="col-md-1 col-0"></div>
+
+                    <div class="col-md-4 col-6">
+                        <span>@ 2018 SAS WITMAN All Right Reserved</span>
+                    </div>
+
+                    <div class="col-md-2 col-0"></div>
+
+                    <div class="col-md-4 col-6" id="UPFooterNetworkDivImg">
+                        <a href="https://www.facebook.com/Applisammy/" target="_blank"><img src="img/socialnetworks/facebook.png" alt="Logo Facebook"></a>
+                        <a href="https://twitter.com/applisammy" target="_blank"><img src="img/socialnetworks/twitter.png"  alt="Logo Twitter"></a>
+                        <a href="https://www.instagram.com/applisammy/?hl=fr" target="_blank"><img src="img/socialnetworks/instagram.png" alt="Logo Instagram"></a>
+                        <a href="https://www.linkedin.com/company/applisammy/" target="_blank"><img src="img/socialnetworks/linkedin.png" alt="Logo Linkedin"></a>
+                    </div>
+
+                    <div class="col-md-1 col-0"></div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-1 col-0"></div>
+        </div>
+
+        <script>
+            /* Script pour le défilement de la div */
+
+            function defilement() {
+                if (document.getElementById("div1").classList.contains('displaynone') == false) {
+                    $('#div1').toggleClass('hiddendiv');
+                    setTimeout(function () {
+                        $('#div1').toggleClass('displaynone');
+                    }, 300);
+
+                    $('#div2').toggleClass('hiddendiv');
+                    setTimeout(function () {
+                        $('#div2').toggleClass('displaynone');
+                        if ($(window).width() < 769) {
+                            $("#UserRow3Img2Div").css("height", $("#UserRow3Div2Img").height());
+                        }
+                    }, 300);
+
+
+                } else if (document.getElementById("div2").classList.contains('displaynone') == false) {
+                    $('#div2').toggleClass('hiddendiv');
+                    setTimeout(function () {
+                        $('#div2').toggleClass('displaynone');
+                    }, 300);
+                    $('#div3').toggleClass('hiddendiv');
+                    setTimeout(function () {
+                        $('#div3').toggleClass('displaynone');
+                        if ($(window).width() < 769) {
+                            $("#UserRow3Img3Div").css("height", $("#UserRow3Div3Img").height());
+                        }
+                    }, 300);
+
+
+                } else if (document.getElementById("div3").classList.contains('displaynone') == false) {
+                    $('#div3').toggleClass('hiddendiv');
+                    setTimeout(function () {
+                        $('#div3').toggleClass('displaynone');
+                    }, 300);
+
+                    $('#div4').toggleClass('hiddendiv');
+                    setTimeout(function () {
+                        $('#div4').toggleClass('displaynone');
+                        if ($(window).width() < 769) {
+                            $("#UserRow3Img4Div").css("height", $("#UserRow3Div4Img").height());
+                        }
+                    }, 300);
+
+
+                } else if (document.getElementById("div4").classList.contains('displaynone') == false) {
+                    $('#div4').toggleClass('hiddendiv');
+                    setTimeout(function () {
+                        $('#div4').toggleClass('displaynone');
+                    }, 300);
+
+
+                    $('#div1').toggleClass('hiddendiv');
+                    setTimeout(function () {
+                        $('#div1').toggleClass('displaynone');
+                        if ($(window).width() < 769) {
+                            $("#UserRow3Img1Div").css("height", $("#UserRow3Div1Img").height());
+                        }
+                    }, 300);
+
+                }
+
+                window.clearTimeout(initial);
+                DefilementAuto();
+            }
+
+            $("#UserRow3").click(defilement);
+
+            function DefilementAuto() {
+                initial = window.setTimeout(
+                    defilement, 8000);
+
+            }
+
+            DefilementAuto();
+
+            if ($(window).width() < 769) {
+                setTimeout(function () {
+                    $("#UserRow3Img1Div").css("height", $("#UserRow3Div1Img").height())
+                }, 300);
+                /* Permet de mettre la hauteur pour la 1ère div */
+            }
+
+        </script>
+    </footer>
+</div>
 
 </body>
 </html>

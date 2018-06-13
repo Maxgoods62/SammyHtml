@@ -22,12 +22,52 @@
 
         var onResize = function() {
             $("body").css("padding-top", $(".navbar-expand-md").height());
+            $("#divIMGHandshake").css("height", $("#PartenaireRow6Div1").height());
+            $("#PartenaireHandshake").css("height", $("#PartenaireRow6Div1").height());
+
         };
 
         $(window).resize(onResize);
 
-        $(function() {
+        $(document).ready(function(){
             onResize();
+            setTimeout(function(){
+                $("#PartenaireHandshake").css("height", $("#PartenaireRow6Div1").height());
+                }, 100);
+        });
+    </script>
+    <script>
+
+
+        $(document).ready(function(){
+            $("a").click(function() {
+
+                if ( document.getElementById("cardvisibility").classList.contains('active') ) {
+                    document.getElementById("cardvisibility").classList.remove('show');
+                    document.getElementById("cardvisibility").classList.remove('active');
+
+                }
+                if ( document.getElementById("cardcommunication").classList.contains('show') ) {
+                    document.getElementById("cardcommunication").classList.remove('show');
+                    document.getElementById("cardcommunication").classList.remove('active');
+
+                }
+                if ( document.getElementById("cardfidelisation").classList.contains('show') ) {
+                    document.getElementById("cardfidelisation").classList.remove('show');
+                    document.getElementById("cardfidelisation").classList.remove('active');
+
+                }
+                if ( document.getElementById("cardtrafic").classList.contains('show') ) {
+                    document.getElementById("cardtrafic").classList.remove('show');
+                    document.getElementById("cardtrafic").classList.remove('active');
+
+                }
+                if ( document.getElementById("cardcible").classList.contains('show') ) {
+                    document.getElementById("cardcible").classList.remove('show');
+                    document.getElementById("cardcible").classList.remove('active');
+
+                }
+            });
         });
     </script>
 
@@ -87,117 +127,411 @@
 <div id="UPImgBackground">
 
 
-    <div class="MainBottom outeruser">
-        <div class="topcentre">
-            <h2 class="margincentered">Parce que 8 jeunes sur 10 l'ont adopté, récompensons les sam</h2> <br> <br>
-            <button class="btn btn-boutoncentre margincentered" type="button">Devenir Partenaire</button>
-            <p>Bénéficiez de nombreux avantages et participez à réinventer le sécurité routière de demain !</p>
+    <div class="MainBottom outeruser" id="MainBottomPartenaire">
+        <div class="topcentrePartenaire">
+            <h2 class="margincentered">Parce que 8 jeunes sur 10 l'ont adopté, récompensons les Sam !</h2><br>
+            <p>Bénéficiez de nombreux avantages et participez à réinventer la sécurité routière de demain !</p>
+            <a href="#"><button class="btn" id="PartenaireBtn1" type="button">Devenir Partenaire</button></a>
+            <a href="#" target="_blank"><button class="btn" id="PartenaireBtn2" type="button">Télécharger l'App</button></a>
         </div>
     </div>
 
-    <img src="img/partenaire/Partenaire.png" alt="Partenaire" id="UPCadeauImg">
+    <img src="img/partenaire/ordinateur.png" alt="Partenaire" id="UPCadeauImg">
 
 </div>
 
 <div class="container-fluid" id="Partenairemaincontent">
     <div class="row">
 
-        <div class="col-1"></div>
+        <div class="col-md-1 col-0"></div>
 
-        <div class="col-10">
+        <div class="col-md-10 col-12">
             <div class="row">
 
-            <!-- Nav tabs -->
-            <div class="col-12">
-                <ul class="nav PartenaireTabs nav-justified" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link active" data-toggle="tab" href="#visibility">
-                            <img src="img/partenaire/Oeil.png" alt="Oeil">
-                            <span>Augmenter votre visibilité</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#communication">
-                            <img src="img/partenaire/graph.png" alt="Graph">
-                            <span>Optimisez votre communication</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#fidelisation">
-                            <img src="img/partenaire/smartphone.png" alt="Smartphone">
-                            <span>Un outil de fidélisation</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#trafic">
-                            <img src="img/partenaire/Plus.png" alt="Plus">
-                            <span>Créer plus de trafic </span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#cible">
-                            <img src="img/partenaire/target.png" alt="Cible">
-                            <span>Ciblez votre clientèle </span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+                <div class="col-md-12">
+                    <div class="tab-content">
+                        <div id="visibility" class="container tab-pane active"><br>
+                            <p>Sammy vous permet de toucher une très large audience. </p>
+                            <p>De plus, vos annonces sont directement accessibles dans la poche de vos clients sur la plage horaire de votre choix.</p>
+                        </div>
+                        <div id="communication" class="container tab-pane fade"><br>
+                            <p>Pour chacune de vos campagnes publicitaires nous vous fournissons une analytique détaillée.</p>
+                            <p>Cela peut vous permettre de mieux connaître votre cible en mesurant l’impact de votre message et ainsi d’optimiser votre stratégie de communication.</p>
+                        </div>
+                        <div id="fidelisation" class="container tab-pane fade"><br>
+                            <p>Nos espaces publicitaires ont été conçus pour amener l’utilisateur à se déplacer physiquement ou virtuellement dans les points de ventes de nos partenaires.</p>
+                            <p>De plus, vos campagnes publicitaires peuvent être planifiées à l’avances vous garantissant toujours plus d’autonomie.</p>
+                        </div>
+                        <div id="trafic" class="container tab-pane fade"><br>
+                            <p>La mise en place de boutons “Call-to-action” permet d’accroître le trafic sur la page de votre choix (site internet, App Store …).</p>
+                            <p> En redirigeant votre audience vers votre lien, ce bouton est une véritable porte d’entrée digitale vers votre business.</p>
+                        </div>
+                        <div id="cible" class="container tab-pane fade"><br>
+                            <p>Grâce à notre algorithme, les annonces sont listées en fonction de la proximité de nos utilisateurs.</p>
+                            <p>Ainsi, notre offre s’adapte à tout type de business qu’importe la relation qu’il entretient avec ses clients.</p>
+                        </div>
+                    </div>
 
-            <div class="col-12">
-                <!-- Tab panes -->
-                <div class="tab-content">
-                    <div id="visibility" class="container tab-pane active"><br>
-                        <h3>Un outil pour augmenter votre visibilité</h3>
-                        <p>Sammy vous permet de toucher une très large audience. </p>
-                        <p>De plus, vos annonces sont directement accessibles dans la poche de vos clients sur la plage horaire de votre choix.</p>
-                    </div>
-                    <div id="communication" class="container tab-pane fade"><br>
-                        <h3>Un outil pour optimiser votre communication</h3>
-                        <p>Pour chacune de vos campagnes publicitaires nous vous fournissons une analytique détaillée.</p>
-                        <p>Cela peut vous permettre de mieux connaître votre cible en mesurant l’impact de votre message et ainsi d’optimiser votre stratégie de communication.</p>
-                    </div>
-                    <div id="fidelisation" class="container tab-pane fade"><br>
-                        <h3>Un outil de fidélisation</h3>
-                        <p>Nos espaces publicitaires ont été conçus pour amener l’utilisateur à se déplacer physiquement ou virtuellement dans les points de ventes de nos partenaires.</p>
-                        <p>De plus, vos campagnes publicitaires peuvent être planifiées à l’avances vous garantissant toujours plus d’autonomie.</p>
-                    </div>
-                    <div id="trafic" class="container tab-pane fade"><br>
-                        <h3>Un outil pour créer plus de trafic </h3>
-                        <p>La mise en place de boutons “Call-to-action” permet d’accroître le trafic sur la page de votre choix (site internet, App Store …).</p>
-                        <p> En redirigeant votre audience vers votre lien, ce bouton est une véritable porte d’entrée digitale vers votre business.</p>
-                    </div>
-                    <div id="cible" class="container tab-pane fade"><br>
-                        <h3>Un outil pour cibler votre clientèle</h3>
-                        <p>Grâce à notre algorithme, les annonces sont listées en fonction de la proximité de nos utilisateurs.</p>
-                        <p>Ainsi, notre offre s’adapte à tout type de business qu’importe la relation qu’il entretient avec ses clients.</p>
-                    </div>
+
+                    <hr id="Partenairehr1" class="margincentered">
                 </div>
-            </div>
 
             </div>
         </div>
 
-        <div class="col-1"></div>
+        <div class="col-md-1 col-0"></div>
 
     </div>
+
+    <div class="row">
+
+        <div class="col-md-1 col-0"></div>
+
+        <div class="col-md-10 col-12">
+            <div class="row" id="PartenaireRow2">
+
+                <div class="card-group nav" role="tablist">
+
+                    <div class="card cardPartenaire">
+                        <a class="nav-link active" data-toggle="tab" href="#visibility" id="cardvisibility">
+                            <img class="card-img-top card-icon" src="img/partenaire/eye-open.png" alt="Icon eye-open">
+                            <div class="card-body">
+                                <h5 class="card-title" id="visibilitytitle">Augmentez votre visibilité</h5>
+                                <p class="card-text">Avec Sammy, augmentez votre visibilité digitale et touchez une très large audience.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card cardPartenaire">
+                        <a class="nav-link" data-toggle="tab" href="#communication" id="cardcommunication">
+                            <img class="card-img-top card-icon" src="img/partenaire/arrow.png" alt="Icon arrow">
+                            <div class="card-body">
+                                <h5 class="card-title" id="communicationtitle">Optimisez votre communication</h5>
+                                <p class="card-text">Avec la géolocalisation communiquez auprès des utilisateurs proches de vous.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card cardPartenaire">
+                        <a class="nav-link" data-toggle="tab" href="#fidelisation"  id="cardfidelisation">
+                            <img class="card-img-top card-icon" src="img/partenaire/smartphone.png" alt="Icon smartphone">
+                            <div class="card-body">
+                                <h5 class="card-title" id="fidelisationtitle">Un outil de fidélisation</h5>
+                                <p class="card-text">Créez et planifiez des offres récurrentes au fort potentiel de fidélisation</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card cardPartenaire">
+                        <a class="nav-link" data-toggle="tab" href="#trafic"  id="cardtrafic">
+                            <img class="card-img-top card-icon" src="img/partenaire/plus-symbol.png" alt="Icon plus-symbol">
+                            <div class="card-body">
+                                <h5 class="card-title" id="trafictitle">Génerez plus de trafic</h5>
+                                <p class="card-text">Attirez les utilisateurs dans vos magasins et sur vos plateformes digitales.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card cardPartenaire">
+                        <a class="nav-link" data-toggle="tab" href="#cible" id="cardcible">
+                            <img class="card-img-top card-icon" src="img/partenaire/target.png" alt="Icon target">
+                            <div class="card-body">
+                                <h5 class="card-title" id="cibletitle">Ciblez votre clientèle</h5>
+                                <p class="card-text">Communiquez uniquement auprès des utilisateurs interessés par votre offre.</p>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-1 col-0"></div>
+
+    </div>
+
+    <div class="row" id="PartenaireRow3">
+
+        <div class="col-md-3 col-0 PartenaireBackgroundBleu">
+            <div class="row" id="PartenaireRow3-Rowdeux">
+                <div class="col-md-6 col-12"> <a href="https://www.facebook.com/Applisammy/" target="_blank"><img src="img/socialnetworks/facebook.png" alt="Logo Facebook" id="lfacebook"></a></div>
+                <div class="col-md-6 col-12"><a href="https://twitter.com/applisammy" target="_blank"><img src="img/socialnetworks/twitter.png"  alt="Logo Twitter" id="ltwitter"></a></div>
+                <div class="col-md-6 col-12"> <a href="https://www.instagram.com/applisammy/?hl=fr" target="_blank"><img src="img/socialnetworks/instagram.png" alt="Logo Instagram" id="linstagram"></a></div>
+                <div class="col-md-6 col-12"> <a href="https://www.linkedin.com/company/applisammy/" target="_blank"><img src="img/socialnetworks/linkedin.png" alt="Logo Linkedin" id="llinkedin"></a></div>
+            </div>
+        </div>
+
+        <div class="col-md-9 col-12">
+            <div class="row PartenaireBackgroundGris" >
+
+                <div class="col-md-12">
+                    <div id="PartenaireRow3TextDiv">
+                        <h4>Devenir partenaire sammy c'est :</h4>
+                        <p>Avec Sammy, notre objectif est d'aider les jeunes conducteurs à se responsabiliser pour réduire la mortalité routière. L'utilisateur réalise alors une bonne action transformée en bons d'achat à utiliser dans les boutiques en ligne et les points de ventes partenaire de l'application.</p>
+                        <p>Ainsi en tant que partenaire de Sammy vous vous engagez, vous et votre entreprise dans une démarche responsable et contribuez à inventer la sécurité routière de demain. Au-delà de cette démarche citoyenne, vous bénéficiez de nombreux outils pour développer votre business !</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="row" id="PartenaireRow4">
+
+        <div class="col-md-1 col-0 col-0"></div>
+
+        <div class="col-md-10 col-12 col-md-12">
+            <div class="row">
+
+                <div class="col-md-5 col-12">
+                    <div id="PartenaireRow4Div">
+                        <h4>Un vrai jeu d'enfant</h4>
+                        <ul id="PartenaireRow4Text">
+                            <li>Mise en place accessible à tous et pour tous</li>
+                            <li>Un espace dédié à votre entreprise et vos collaborateurs</li>
+                            <li>Des tableaux de bord récapitulant les statistiques de vos annonces</li>
+                            <li>Une interface claire et simple d'utilisation</li>
+                        </ul>
+                        <button class="btn" id="PartenaireBtn3" type="button">J'essaye !</button>
+                    </div>
+                </div>
+                <div class="col-md-7 col-12">
+                    <img src="img/partenaire/Visuel-MacBook.png" alt="Visuel-MacBook" id="PartenaireImgRow4">
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-1 col-0 col-0"></div>
+
+    </div>
+
+    <div class="row" id="PartenaireRow5">
+
+        <div class="col-md-1 col-0"></div>
+
+        <div class="col-md-10 col-12">
+            <div class="row">
+
+                <div class="col-md-5 col-12">
+                    <img src="img/partenaire/phone.png" alt="phone">
+                </div>
+                <div class="col-md-7 col-12">
+
+                    <div class="box clearfix float-my-children">
+                        <img src="img/partenaire/Heart-Icon.png" alt="Heart-Icon">
+                        <div class="BoxText">Optimisez l'image de votre entreprise</div>
+                    </div>
+
+                    <div class="box clearfix float-my-children">
+                        <img src="img/partenaire/Tag-Icon.png" alt="Tag-Icon">
+                        <div class="BoxText">
+                            <span>Maximiser vos résultats</span>
+                            <p>Avec un fort taux d'ouverture, nos coupures mobiles sont une véritable porte d'entrée dans votre business !</p>
+                        </div>
+                    </div>
+
+                    <div class="box clearfix float-my-children">
+                        <img src="img/partenaire/Case-Icon.png" alt="Case-Icon">
+                        <div class="BoxText">
+                            Analysez vos compagnes en temps réel
+                        </div>
+                    </div>
+
+                    <div class="box clearfix float-my-children">
+                        <img src="img/partenaire/Pencil-Icon.png" alt="Pensil-Icon">
+                        <div class="BoxText">Personnalisez vos offres promotionnelles</div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-1 col-0"></div>
+
+    </div>
+
+    <div class="row PartenaireBackgroundGris" id="PartenaireRow6">
+
+        <div class="col-md-1 col-0"></div>
+
+        <div class="col-md-10 col-12">
+            <div class="row">
+
+                <div class="col-md-6 col-12" id="PartenaireRow6Div1">
+                   <h4>Un accompagnement global</h4>
+
+                    <ul>
+                        <li>Kit de communication intégré</li>
+                        <li>Un suivi de votre offre</li>
+                        <li>Ligne directe pour plus de reactivité</li>
+                    </ul>
+
+                    <p>Nous mettons un point d'honneur à vous apporter le meilleur accompagnement possible afin de nouer des partenariats de confiance.
+                    Sammy vous accompagne de l'élaboration de votre offre jusqu'à la restitution de l'analyse de vos campagnes. Aussi bien dans la mise en place de notre solution que dans la communication via un kit intégré.</p>
+                </div>
+                <div class="col-md-6 col-12 divIMGHandshake" id="divIMGHandshake">
+                    <img src="img/partenaire/handshake.png" alt="handshake" id="PartenaireHandshake">
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-1 col-0"></div>
+
+    </div>
+
+    <div class="row PartenaireBackgroundBleu" id="PartenaireRow7">
+
+        <div class="col-md-1 col-0"></div>
+
+        <div class="col-md-10 col-12">
+
+            <a href="#" target="_blank"><button id="PButtonWatchVideo"></button></a>
+
+            <h6>Regardez la vidéo</h6>
+            <p>Les fondateurs vous expliquent le concept de l'application de vive voix en direct à la télévision. Le reportage date de février 2018 et résume l'état de la sécurité routière de l'époque. Face à ces constats peu optimistes, Sammy s'impose comme la solution qui fera bouger les choses !</p>
+            <p>Vous aussi vous voulez agir ? Alors devenez partenaire de l'application et construisons ensemble la sécurité routière de demain.</p>
+
+        </div>
+
+        <div class="col-md-1 col-0"></div>
+
+    </div>
+
+    <div class="row" id="PartenaireRow8">
+
+        <div class="col-md-1 col-0"></div>
+
+        <div class="col-md-10 col-12">
+
+            <div id="PartenaireRow8Div">
+                <h6>Rien de mieux que d'essayer pour être sûr !</h6>
+
+                <a href="#" target="_blank"><button class="btn" id="PartenaireBtn4" type="button">Télécharger l'App</button></a>
+            </div>
+        </div>
+
+        <div class="col-md-1 col-0"></div>
+
+    </div>
+
+    <div class="row PartenaireBackgroundBleu" id="PartenaireRow9">
+
+        <div class="col-md-1 col-0"></div>
+
+        <div class="col-md-10 col-12">
+
+            <p>Le marché mondial du coupon digital via le support Smartphone est estimé par Juniper Research à 31 milliards de dollars d'ici 2019. Depuis plusieurs années, le secteur du couponning cherche un second souffle et connaît une mutation profonde guidée par de nouveaux usages adoptés massivement par les consommateurs de plus en plus séduits par le digital. Pourtant les solutions en place ne sont pas adaptées : proposer des coupons sans efforts ne donne pas du tout les mêmes résultats qu'un coupon obtenu et mérité après une bonne action ou un acte gratifiant. Quelle belle expérience de montrer à la caisse d'un supermaché son bon d'achat obtenu après avoir accompli sa mission de capitaine de soirée ! Une belle manière de récompenser les Sam ! </p>
+
+        </div>
+
+        <div class="col-md-1 col-0"></div>
+
+    </div>
+
 </div>
 
+<div class="container-fluid">
+    <footer class="site-footer" id="UPFooter">
 
-<footer id="footerinfo" class="site-footer" role="contentinfo">
-    <div class="container footer-inner">
         <div class="row">
-            <div class="site-info col-sm-12">
-                <div class="socialnetwork">
-                    <a href="https://www.facebook.com/Marginals.Lab" target="_blank"><img src="img/socialnetworks/facebook.png" alt="Facebook"></a>
-                    <a href="https://twitter.com/Marginals_Lab" target="_blank"><img src="img/socialnetworks/twitter.png" alt="Twitter"></a>
-                    <a href="https://www.instagram.com/marginals_lab/" target="_blank"><img src="img/socialnetworks/instagram.png" alt="Instagram"></a>
-                    <a href="https://www.linkedin.com/company/marginals-lab/" target="_blank"><img src="img/socialnetworks/linkedin.png" alt="Linkedin"></a>
+            <div class="col-md-1 col-0"></div>
+
+            <div class="col-md-10 col-12">
+                <div class="row" id="FooterInformation">
+                    <div class="col-md-2 col-0"></div>
+
+                    <div class="col-md-2 col-6">
+                        <h6>Company</h6>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Jobs</a></li>
+                            <li><a href="#">Press</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-2 col-6">
+                        <h6>Development</h6>
+                        <ul>
+                            <li><a href="#">IOS</a></li>
+                            <li><a href="#">Android</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-2 col-6">
+                        <h6>Community</h6>
+                        <ul>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-2 col-6">
+                        <h6>Info</h6>
+                        <ul>
+                            <li><a href="#">Terms of service</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-2 col-0"></div>
+
                 </div>
 
             </div>
+
+            <div class="col-md-1 col-0"></div>
         </div>
-    </div>
-</footer>
+
+        <div class="row" id="UPFooterNewsletter">
+            <div class="col-md-1 col-0"></div>
+
+            <div class="col-md-10 col-12">
+                <h6>Restez informé</h6>
+                <span>Inscrivez-vous à la newsletter pour recevoir des informations sur l'application</span>
+
+                <form action="#" method="post">
+                    <input type="email" name="mail">
+                    <button class="btn" type="submit" id="UPFormulaireButtonMail">S'inscrire</button>
+                </form>
+
+            </div>
+
+            <div class="col-md-1 col-0"></div>
+        </div>
+
+        <div class="row PartenaireBackgroundBleu" id="UPFooterNetwork">
+            <div class="col-md-1 col-0"></div>
+
+            <div class="col-md-10 col-12">
+
+                <div class="row">
+                    <div class="col-md-1 col-0"></div>
+
+                    <div class="col-md-4 col-6">
+                        <span>@ 2018 SAS WITMAN All Right Reserved</span>
+                    </div>
+
+                    <div class="col-md-2 col-0"></div>
+
+                    <div class="col-md-4 col-6" id="UPFooterNetworkDivImg">
+                        <a href="https://www.facebook.com/Applisammy/" target="_blank"><img src="img/socialnetworks/facebook.png" alt="Logo Facebook"></a>
+                        <a href="https://twitter.com/applisammy" target="_blank"><img src="img/socialnetworks/twitter.png"  alt="Logo Twitter"></a>
+                        <a href="https://www.instagram.com/applisammy/?hl=fr" target="_blank"><img src="img/socialnetworks/instagram.png" alt="Logo Instagram"></a>
+                        <a href="https://www.linkedin.com/company/applisammy/" target="_blank"><img src="img/socialnetworks/linkedin.png" alt="Logo Linkedin"></a>
+                    </div>
+
+                    <div class="col-md-1 col-0"></div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-1 col-0"></div>
+        </div>
+    </footer>
+</div>
 
 </body>
 </html>

@@ -229,7 +229,7 @@ header a:hover, header a:visited, header a:link, header a:active{
 }
 
 #UPCadeauImg {
-    max-width: 35%;
+    max-width: 30%;
     height: auto;
     position: absolute;
     left: 60vw;

@@ -705,10 +705,10 @@ a.nav-link {
 }
 .topUser h2 {
     margin-right: 30% !important;
-    padding-top: 15%;
 }
 .topcentrePartenaire h2, .topUser h2 {
     font-size: 50px; /* 1080p */
+    padding-top: 15%;
 }
 .topcentrePartenaire p, .topUser p{
     font-size: 18px; /* 1080p */

@@ -2240,6 +2240,9 @@ bottom: 0;
     .UserRow2ImgGoogle, .UserRow2ImgApple {
         width: 30%;
     }
+    #PartenaireRow8 .col-md-10, #UserRow1 .col-md-10 {
+        height: 70vh;
+    }
 }
 
 @media all and (min-width: 600px) and (max-width: 899px)

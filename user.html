@@ -30,6 +30,7 @@
                 $("#UserRow5DivImg").css("height", 500);
                 console.log($("html").height())
             }
+            $("#UPImgBackground").css("height", $("#TopUser").height());
         };
 
         $(window).resize(onResize);
@@ -98,7 +99,7 @@
 <div id="UPImgBackground">
 
     <div class="MainBottom outeruser" id="MainBottomUser">
-        <div class="topUser">
+        <div class="topUser" id="TopUser">
             <h2 class="margincentered">Sammy préserve ta fête !</h2><br>
             <p>Avec Sammy fini les problèmes en fin de soirée, et en plus tu gagnes des récompenses. C'est gratuit, alors qu'est-ce que tu attends ?</p><br><br>
             <a href="#"><button class="btn" id="UserBtn1" type="button">Télécharger l'app</button></a>

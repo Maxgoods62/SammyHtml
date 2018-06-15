@@ -223,7 +223,7 @@ header a:hover, header a:visited, header a:link, header a:active{
 
 
 .outeruser {
-    top: 10vh !important;
+    top: 0 !important;
     padding-left: 23%;
     padding-right: 23%;
 }
@@ -704,10 +704,11 @@ a.nav-link {
     color: white;
 }
 .topUser h2 {
-    margin-right: 40% !important;
+    margin-right: 30% !important;
+    padding-top: 15%;
 }
 .topcentrePartenaire h2, .topUser h2 {
-    font-size: 48px; /* 1080p */
+    font-size: 50px; /* 1080p */
 }
 .topcentrePartenaire p, .topUser p{
     font-size: 18px; /* 1080p */
@@ -1208,7 +1209,7 @@ a.nav-link {
 }
 
 .UserImgTop {
-    max-width: 18% !important;
+    max-width: 14% !important;
    /* bottom: -20% !important; */
 }
 
